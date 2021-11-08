@@ -1,0 +1,4 @@
+io/flutter/plugins/GeneratedPluginRegistrant.java
+ io.flutter.plugins.GeneratedPluginRegistrant
+com/mcleaw/sion_inter/BuildConfig.java
+ com.mcleaw.sion_inter.BuildConfig
