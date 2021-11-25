@@ -14,7 +14,7 @@ class _SplashPageState extends State<SplashPage> {
   @override
   void initState() {
     Timer(Duration(seconds: 3), () {
-      Navigator.pushNamed(context, loginScreenPath);
+      Navigator.pushReplacementNamed(context, loginScreenPath);
     });
     super.initState();
   }

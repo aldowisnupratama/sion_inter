@@ -1,2 +1,11 @@
 export 'pages/splash_page.dart';
 export 'pages/login_page.dart';
+export 'widgets/textformfield_widgets.dart';
+export 'widgets/costume_button.dart';
+export 'pages/biodata_pages.dart';
+export 'widgets/costume_biodata_items.dart';
+export 'pages/drawer/drawer_menu_screen.dart';
+export 'pages/home_page.dart';
+export 'pages/main_page.dart';
+export 'widgets/loading_widget..dart';
+export 'widgets/show_dialog_widget.dart';

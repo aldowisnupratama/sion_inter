@@ -1,4 +1,4 @@
-#Thu Nov 04 17:07:09 WITA 2021
-base.0=/home/maroon/Desktop/deployProject/sion_inter/build/app/intermediates/dex/debug/mergeDexDebug/classes.dex
+#Wed Nov 17 14:00:16 WITA 2021
+base.0=/home/maroon/Desktop/github/sion_inter/build/app/intermediates/dex/debug/mergeDexDebug/classes.dex
 path.0=classes.dex
 renamed.0=classes.dex
