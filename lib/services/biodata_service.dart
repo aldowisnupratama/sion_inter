@@ -8,7 +8,7 @@ import 'package:http/http.dart' as http;
 class BiodataService {
   Future<BiodataModel> fetchBiodata() async {
     var prefs = await SharedPreferences.getInstance();
-    Uri _uri = Uri.https(baseApi, biodataAPI);
+    Uri _uri = Uri.https(baseApi, biodataApi);
     var token = prefs.get("token");
 
     try {

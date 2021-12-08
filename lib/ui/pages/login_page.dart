@@ -6,10 +6,16 @@ import 'package:sion_inter/cubit/cubit.dart';
 import 'package:sion_inter/ui/ui.dart';
 import '../../shared/shared.dart';
 
-class LoginPage extends StatelessWidget {
+class LoginPage extends StatefulWidget {
   LoginPage({Key? key}) : super(key: key);
 
+  @override
+  _LoginPageState createState() => _LoginPageState();
+}
+
+class _LoginPageState extends State<LoginPage> {
   final TextEditingController nimController = TextEditingController(text: "");
+
   final TextEditingController passwordController =
       TextEditingController(text: "");
 
@@ -59,14 +65,13 @@ class LoginPage extends StatelessWidget {
             CostumeTextFormField(
               controller: nimController,
               textformfieldName: "NIM",
-              hintText: "Masukan NIM Anda",
+              hintText: "Enter Your NIM",
               nimTextFormField: true,
             ),
-            CostumeTextFormField(
-              controller: passwordController,
-              hintText: "Masukan password anda",
+            CostumePasswordField(
               textformfieldName: "Password",
-              obsecureText: true,
+              controller: passwordController,
+              hintText: "Enter Your Password",
             ),
             Align(
                 alignment: Alignment.centerRight,
@@ -78,12 +83,12 @@ class LoginPage extends StatelessWidget {
                           return ShowDialogWidget.dialogWidget(
                               Icons.error,
                               Colors.red,
-                              "Silahkan Hubungi PUSKOMJAR bagian Sistem Infomasi untuk mengganti password",
+                              "Please contact PUSKOMJAR in the Information System section to change the password",
                               CostumeButton(
                                   width: SizeConfig.blockHorizontal(40),
                                   height: SizeConfig.blockVertical(5),
                                   buttonName: Text(
-                                    "Tutup",
+                                    "Close",
                                     style: whiteTextStyle,
                                   ),
                                   color: kPrimaryColor,
@@ -93,7 +98,7 @@ class LoginPage extends StatelessWidget {
                         });
                   },
                   child: Text(
-                    "Lupa password?",
+                    "Forget password?",
                     style: lightBlueTextStyle.copyWith(fontWeight: semiBold),
                   ),
                 )),
@@ -110,12 +115,12 @@ class LoginPage extends StatelessWidget {
                         return ShowDialogWidget.dialogWidget(
                             Icons.error,
                             Colors.red,
-                            "Silahkan memasukan NIM dan kata sandi yang sesuai",
+                            "NIM and password do not match",
                             CostumeButton(
                                 width: SizeConfig.blockHorizontal(40),
                                 height: SizeConfig.blockVertical(5),
                                 buttonName: Text(
-                                  "Tutup",
+                                  "Close",
                                   style: whiteTextStyle,
                                 ),
                                 color: kPrimaryColor,
@@ -143,9 +148,54 @@ class LoginPage extends StatelessWidget {
                           letterSpacing: 1)),
                   color: kPrimaryColor,
                   onPressed: () {
-                    context.read<LoginCubit>().loginPost(
-                        nimController.text.trim(),
-                        passwordController.text.trim());
+                    if (nimController.text.length == 9) {
+                      if (passwordController.text.length >= 8 &&
+                          passwordController.text.length <= 20) {
+                        context.read<LoginCubit>().loginPost(
+                            nimController.text.trim(),
+                            passwordController.text.trim());
+                      } else {
+                        showDialog(
+                            context: context,
+                            builder: (context) {
+                              return ShowDialogWidget.dialogWidget(
+                                  Icons.error,
+                                  Colors.red,
+                                  "Please enter your NIM and password according to the provisions",
+                                  CostumeButton(
+                                      width: SizeConfig.blockHorizontal(40),
+                                      height: SizeConfig.blockVertical(5),
+                                      buttonName: Text(
+                                        "Close",
+                                        style: whiteTextStyle,
+                                      ),
+                                      color: kPrimaryColor,
+                                      onPressed: () {
+                                        Navigator.pop(context);
+                                      }));
+                            });
+                      }
+                    } else {
+                      showDialog(
+                          context: context,
+                          builder: (context) {
+                            return ShowDialogWidget.dialogWidget(
+                                Icons.error,
+                                Colors.red,
+                                "Please enter your NIM consisting of 9 digits",
+                                CostumeButton(
+                                    width: SizeConfig.blockHorizontal(40),
+                                    height: SizeConfig.blockVertical(5),
+                                    buttonName: Text(
+                                      "Close",
+                                      style: whiteTextStyle,
+                                    ),
+                                    color: kPrimaryColor,
+                                    onPressed: () {
+                                      Navigator.pop(context);
+                                    }));
+                          });
+                    }
                   },
                 );
               },

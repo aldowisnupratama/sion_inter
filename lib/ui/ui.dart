@@ -9,3 +9,8 @@ export 'pages/home_page.dart';
 export 'pages/main_page.dart';
 export 'widgets/loading_widget..dart';
 export 'widgets/show_dialog_widget.dart';
+export 'widgets/costume_gpa_tile_widgets.dart';
+export 'widgets/costume_GPA_line_chart.dart';
+export 'widgets/costume_final_test_card_widget.dart';
+export 'widgets/password_textfield.dart';
+export 'widgets/password_textfield.dart';

@@ -30,7 +30,6 @@ class _BiodataPageState extends State<BiodataPage> {
               child: ListView(children: [
                 Container(
                   margin: EdgeInsets.only(
-                      top: SizeConfig.blockVertical(1),
                       left: SizeConfig.blockHorizontal(6),
                       right: SizeConfig.blockHorizontal(6)),
                   child: Row(
@@ -38,6 +37,8 @@ class _BiodataPageState extends State<BiodataPage> {
                     children: [
                       GestureDetector(
                         onTap: () {
+                          BlocProvider.of<PageCubit>(context).changePage(
+                              AnnouncementPageState(title: "Announcement"));
                           Navigator.pop(context);
                         },
                         child: Container(
@@ -103,17 +104,17 @@ class _BiodataPageState extends State<BiodataPage> {
                           itemDetails: "${state.biodataModel.biodata?.nim}",
                           color: kBlackColor),
                       CostumeBiodataTile(
-                          itemName: "PRODI",
+                          itemName: "Major",
                           itemDetails:
                               "${state.biodataModel.biodata?.namaProdi}",
                           color: kBlackColor),
                       CostumeBiodataTile(
-                          itemName: "Angkatan",
+                          itemName: "Batch",
                           itemDetails:
                               "${state.biodataModel.biodata?.angkatan}",
                           color: kBlackColor),
                       CostumeBiodataTile(
-                          itemName: "Tempat/Tanggal Lahir",
+                          itemName: "Place\nDate of birth",
                           itemDetails:
                               "${state.biodataModel.biodata?.tempatLahir} / ${state.biodataModel.biodata?.tanggalLahir}",
                           color: kBlackColor),
@@ -123,23 +124,26 @@ class _BiodataPageState extends State<BiodataPage> {
                               "${state.biodataModel.biodata?.email?.toLowerCase()}",
                           color: kBlackColor),
                       CostumeBiodataTile(
-                          itemName: "Ponsel",
+                          itemName: "Phone Number",
                           itemDetails: "${state.biodataModel.biodata?.ponsel}",
                           color: kBlackColor),
                       CostumeBiodataTile(
-                          itemName: "Dosen Wali",
+                          itemName: "Guardian\nLecturer",
                           itemDetails:
                               "${state.biodataModel.biodata?.namaDosenwali}",
                           color: kBlackColor),
                       CostumeBiodataTile(
-                          itemName: "Alamat",
+                          itemName: "Address",
                           itemDetails: "${state.biodataModel.biodata?.alamat}",
                           color: kBlackColor),
                     ],
                   ),
                 ),
                 Container(
-                  margin: EdgeInsets.only(top: 20, left: 24, right: 24),
+                  margin: EdgeInsets.only(
+                      top: SizeConfig.blockVertical(2),
+                      left: SizeConfig.blockHorizontal(8),
+                      right: SizeConfig.blockHorizontal(8)),
                   child: CostumeButton(
                     buttonName: Text(
                       "Update Biodata",
@@ -153,10 +157,13 @@ class _BiodataPageState extends State<BiodataPage> {
                   ),
                 ),
                 Container(
-                  margin: EdgeInsets.only(top: 20, left: 24, right: 24),
+                  margin: EdgeInsets.only(
+                      top: SizeConfig.blockVertical(2),
+                      left: SizeConfig.blockHorizontal(8),
+                      right: SizeConfig.blockHorizontal(8)),
                   child: CostumeButton(
                     buttonName: Text(
-                      "Update Password Microsoft",
+                      "Update Password",
                       style: whiteTextStyle.copyWith(
                           fontSize: 16, fontWeight: semiBold),
                     ),
@@ -167,11 +174,32 @@ class _BiodataPageState extends State<BiodataPage> {
                   ),
                 ),
                 Container(
-                  margin:
-                      EdgeInsets.only(top: 20, left: 24, right: 24, bottom: 40),
+                  margin: EdgeInsets.only(
+                    top: SizeConfig.blockVertical(2),
+                    left: SizeConfig.blockHorizontal(8),
+                    right: SizeConfig.blockHorizontal(8),
+                  ),
                   child: CostumeButton(
                     buttonName: Text(
-                      "Update Biodata Dikti",
+                      "Update Dikti Biodata",
+                      style: whiteTextStyle.copyWith(
+                          fontSize: 16, fontWeight: semiBold),
+                    ),
+                    width: 80,
+                    height: 50,
+                    color: kPrimaryColor,
+                    onPressed: () {},
+                  ),
+                ),
+                Container(
+                  margin: EdgeInsets.only(
+                      top: SizeConfig.blockVertical(2),
+                      left: SizeConfig.blockHorizontal(8),
+                      right: SizeConfig.blockHorizontal(8),
+                      bottom: SizeConfig.blockVertical(5)),
+                  child: CostumeButton(
+                    buttonName: Text(
+                      "Reset Microsoft Teams Password",
                       style: whiteTextStyle.copyWith(
                           fontSize: 16, fontWeight: semiBold),
                     ),

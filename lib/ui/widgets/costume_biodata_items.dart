@@ -40,7 +40,7 @@ class CostumeBiodataTile extends StatelessWidget {
           //   ),
           // ),
           Flexible(
-            child: Text(
+            child: SelectableText(
               "$itemDetails",
               style: blackTextStyle.copyWith(
                 fontWeight: medium,

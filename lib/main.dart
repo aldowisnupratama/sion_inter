@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:sion_inter/cubit/biodata/biodata_cubit.dart';
+
 import 'package:sion_inter/cubit/cubit.dart';
 
 import '../../app_routes.dart';
@@ -18,7 +18,9 @@ class SIONInterApp extends StatelessWidget {
       providers: [
         BlocProvider(create: (context) => PageCubit()),
         BlocProvider(create: (context) => LoginCubit()),
-        BlocProvider(create: (context) => BiodataCubit())
+        BlocProvider(create: (context) => BiodataCubit()),
+        BlocProvider(create: (context) => GpaCubit()),
+        BlocProvider(create: (context) => FinalTestCubit())
       ],
       child: MaterialApp(
         debugShowCheckedModeBanner: false,

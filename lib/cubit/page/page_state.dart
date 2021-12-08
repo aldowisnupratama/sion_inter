@@ -7,8 +7,6 @@ abstract class PageState extends Equatable {
   List<Object> get props => [];
 }
 
-
-
 class AnnouncementPageState extends PageState {
   final String title;
   AnnouncementPageState({required this.title});
@@ -23,4 +21,24 @@ class SchedulePageState extends PageState {
 
   @override
   List<Object> get props => [title];
+}
+
+class GPAPageState extends PageState {
+  final String title;
+
+  GPAPageState({required this.title});
+  @override
+  List<Object> get props => [title];
+}
+
+class GuardianshipPageState extends PageState {
+  final String title;
+
+  GuardianshipPageState({required this.title});
+}
+
+class FinalTestPageState extends PageState {
+  final String title;
+
+  FinalTestPageState({required this.title});
 }
