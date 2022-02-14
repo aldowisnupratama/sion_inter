@@ -154,6 +154,8 @@ class _LoginPageState extends State<LoginPage> {
                         context.read<LoginCubit>().loginPost(
                             nimController.text.trim(),
                             passwordController.text.trim());
+
+                        context.read<AnnouncementCubit>().fetchPengumuman();
                       } else {
                         showDialog(
                             context: context,

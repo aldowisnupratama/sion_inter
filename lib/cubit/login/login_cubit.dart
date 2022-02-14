@@ -13,7 +13,7 @@ class LoginCubit extends Cubit<LoginState> {
 
     try {
       emit(LoginLoading());
-      final loginResponse = await LoginService().fetchLogin(username, password);
+      final loginResponse = await AuthService().fetchLogin(username, password);
 
       if (loginResponse.token != null) {
         pref.setString(

@@ -47,10 +47,33 @@ class _HomePageState extends State<HomePage> {
       body: BlocBuilder<PageCubit, PageState>(
         builder: (context, state) {
           if (state is AnnouncementPageState) {
-            return Container(
-              child: Center(
-                child: Text("announcement page"),
-              ),
+            return BlocBuilder<AnnouncementCubit, AnnouncementState>(
+              builder: (context, state) {
+                if (state is AnnouncementLoading) {
+                  return Center(
+                    child: SpinKitCircle(
+                      color: kPrimaryColor,
+                    ),
+                  );
+                }
+                if (state is AnnouncementInvalid) {
+                  return Center(
+                    child: Container(
+                      child: Text("${state.message}"),
+                    ),
+                  );
+                }
+                if (state is AnnouncementValid) {
+                  return AnnoucementPage(
+                    listOfPengumuman: state.announcementModel,
+                  );
+                }
+                return Container(
+                  child: Center(
+                    child: Text("announcement page"),
+                  ),
+                );
+              },
             );
           }
           if (state is SchedulePageState) {

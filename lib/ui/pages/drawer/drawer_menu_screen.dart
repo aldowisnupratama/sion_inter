@@ -107,6 +107,8 @@ class _DrawerMenuState extends State<DrawerMenu> {
                   onTap: () {
                     BlocProvider.of<PageCubit>(context).changePage(
                         AnnouncementPageState(title: "Announcement"));
+                    BlocProvider.of<AnnouncementCubit>(context)
+                        .fetchPengumuman();
                     widget.drawerController.close!();
                   },
                 ),
@@ -169,6 +171,19 @@ class _DrawerMenuState extends State<DrawerMenu> {
                   onTap: () {
                     BlocProvider.of<PageCubit>(context)
                         .changePage(GuardianshipPageState(title: "Final Test"));
+                    widget.drawerController.close!();
+                  },
+                ),
+                ListTile(
+                  leading: Icon(
+                    Icons.group,
+                    color: kWhiteColor,
+                  ),
+                  title: Text(
+                    "FP Topics",
+                    style: whiteTextStyle,
+                  ),
+                  onTap: () {
                     widget.drawerController.close!();
                   },
                 ),

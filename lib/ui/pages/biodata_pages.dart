@@ -4,7 +4,6 @@ import 'package:flutter_spinkit/flutter_spinkit.dart';
 import 'package:sion_inter/cubit/cubit.dart';
 import 'package:sion_inter/shared/shared.dart';
 import 'package:sion_inter/ui/ui.dart';
-import 'package:provider/provider.dart';
 
 class BiodataPage extends StatefulWidget {
   const BiodataPage({Key? key}) : super(key: key);
@@ -170,7 +169,9 @@ class _BiodataPageState extends State<BiodataPage> {
                     width: 80,
                     height: 50,
                     color: kPrimaryColor,
-                    onPressed: () {},
+                    onPressed: () {
+                      Navigator.pushNamed(context, updatePasswordScreenPath);
+                    },
                   ),
                 ),
                 Container(

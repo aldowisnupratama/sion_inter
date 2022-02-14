@@ -30,5 +30,6 @@ TextStyle redTextStyle = GoogleFonts.poppins(color: kRedColor);
 TextStyle darkBlueTextStyle = GoogleFonts.poppins(color: kPrimaryColor);
 TextStyle lightBlueTextStyle = GoogleFonts.poppins(color: kLightBlueColor);
 TextStyle yellowTextStyle = GoogleFonts.poppins(color: kYellowColor);
+TextStyle whiteComforterTextStyle = GoogleFonts.pacifico(color: kWhiteColor);
 
 const double defaultRadius = 18;

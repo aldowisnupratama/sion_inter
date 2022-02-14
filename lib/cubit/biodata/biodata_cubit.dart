@@ -10,6 +10,7 @@ class BiodataCubit extends Cubit<BiodataState> {
 
   Future<void> biodataGet() async {
     try {
+      emit(BiodataLoading());
       final _biodataResponse = await BiodataService().fetchBiodata();
       if (_biodataResponse.message == null) {
         emit(BiodataValid(biodataModel: _biodataResponse));

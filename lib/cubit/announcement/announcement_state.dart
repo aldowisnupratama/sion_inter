@@ -11,6 +11,18 @@ class AnnouncementInitial extends AnnouncementState {}
 
 class AnnouncementLoading extends AnnouncementState {}
 
-class AnnouncementValid extends AnnouncementState {}
+class AnnouncementValid extends AnnouncementState {
+  final List<Pengumuman>? announcementModel;
 
-class AnnouncementInvalid extends AnnouncementState {}
+  AnnouncementValid(this.announcementModel);
+  @override
+  List<Object> get props => [announcementModel!];
+}
+
+class AnnouncementInvalid extends AnnouncementState {
+  final String? message;
+
+  AnnouncementInvalid(this.message);
+  @override
+  List<Object> get props => [message!];
+}

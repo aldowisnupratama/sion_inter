@@ -6,86 +6,333 @@
 6
 7    <uses-sdk
 8        android:minSdkVersion="16"
-9        android:targetSdkVersion="30" />
+9        android:targetSdkVersion="31" />
 10    <!--
 11         Flutter needs it to communicate with the running application
 12         to allow setting breakpoints, to provide hot reload, etc.
 13    -->
 14    <uses-permission android:name="android.permission.INTERNET" />
-14-->/home/maroon/Desktop/github/sion_inter/android/app/src/debug/AndroidManifest.xml:6:5-66
-14-->/home/maroon/Desktop/github/sion_inter/android/app/src/debug/AndroidManifest.xml:6:22-64
-15
-16    <application
-16-->/home/maroon/Desktop/github/sion_inter/android/app/src/main/AndroidManifest.xml:3:4-40:19
-17        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
-17-->[androidx.core:core:1.1.0] /home/maroon/.gradle/caches/transforms-2/files-2.1/2e94107f30f39be366a17347c2bf100b/core-1.1.0/AndroidManifest.xml:24:18-86
-18        android:debuggable="true"
-19        android:icon="@mipmap/ic_launcher"
-19-->/home/maroon/Desktop/github/sion_inter/android/app/src/main/AndroidManifest.xml:5:9-43
-20        android:label="sion_inter" >
-20-->/home/maroon/Desktop/github/sion_inter/android/app/src/main/AndroidManifest.xml:4:9-35
-21        <activity
-21-->/home/maroon/Desktop/github/sion_inter/android/app/src/main/AndroidManifest.xml:6:9-34:20
-22            android:name="com.mcleaw.sion_inter.MainActivity"
-22-->/home/maroon/Desktop/github/sion_inter/android/app/src/main/AndroidManifest.xml:7:13-41
-23            android:configChanges="orientation|keyboardHidden|keyboard|screenSize|smallestScreenSize|locale|layoutDirection|fontScale|screenLayout|density|uiMode"
-23-->/home/maroon/Desktop/github/sion_inter/android/app/src/main/AndroidManifest.xml:10:13-163
-24            android:hardwareAccelerated="true"
-24-->/home/maroon/Desktop/github/sion_inter/android/app/src/main/AndroidManifest.xml:11:13-47
-25            android:launchMode="singleTop"
-25-->/home/maroon/Desktop/github/sion_inter/android/app/src/main/AndroidManifest.xml:8:13-43
-26            android:theme="@style/LaunchTheme"
-26-->/home/maroon/Desktop/github/sion_inter/android/app/src/main/AndroidManifest.xml:9:13-47
-27            android:windowSoftInputMode="adjustResize" >
-27-->/home/maroon/Desktop/github/sion_inter/android/app/src/main/AndroidManifest.xml:12:13-55
+14-->/home/maroon/Desktop/github/sion_inter/android/app/src/main/AndroidManifest.xml:5:7-69
+14-->/home/maroon/Desktop/github/sion_inter/android/app/src/main/AndroidManifest.xml:5:24-66
+15    <uses-permission android:name="android.permission.REQUEST_INSTALL_PACKAGES" />
+15-->/home/maroon/Desktop/github/sion_inter/android/app/src/main/AndroidManifest.xml:4:7-85
+15-->/home/maroon/Desktop/github/sion_inter/android/app/src/main/AndroidManifest.xml:4:24-82
+16    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+16-->/home/maroon/Desktop/github/sion_inter/android/app/src/main/AndroidManifest.xml:6:7-82
+16-->/home/maroon/Desktop/github/sion_inter/android/app/src/main/AndroidManifest.xml:6:24-79
+17    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" /> <!-- https://developer.android.com/training/package-visibility -->
+17-->/home/maroon/Desktop/github/sion_inter/android/app/src/main/AndroidManifest.xml:7:7-83
+17-->/home/maroon/Desktop/github/sion_inter/android/app/src/main/AndroidManifest.xml:7:24-80
+18    <queries>
+18-->[:flutter_downloader] /home/maroon/Desktop/github/sion_inter/build/flutter_downloader/intermediates/library_manifest/debug/AndroidManifest.xml:8:5-12:15
+19        <intent>
+19-->[:flutter_downloader] /home/maroon/Desktop/github/sion_inter/build/flutter_downloader/intermediates/library_manifest/debug/AndroidManifest.xml:9:9-11:18
+20            <action android:name="android.intent.action.VIEW" />
+20-->[:flutter_downloader] /home/maroon/Desktop/github/sion_inter/build/flutter_downloader/intermediates/library_manifest/debug/AndroidManifest.xml:10:13-65
+20-->[:flutter_downloader] /home/maroon/Desktop/github/sion_inter/build/flutter_downloader/intermediates/library_manifest/debug/AndroidManifest.xml:10:21-62
+21        </intent>
+22    </queries>
+23
+24    <uses-permission android:name="android.permission.WAKE_LOCK" />
+24-->[androidx.work:work-runtime:2.7.1] /home/maroon/.gradle/caches/transforms-2/files-2.1/e157aadcacd7666db2f38678bc049440/work-runtime-2.7.1/AndroidManifest.xml:25:5-68
+24-->[androidx.work:work-runtime:2.7.1] /home/maroon/.gradle/caches/transforms-2/files-2.1/e157aadcacd7666db2f38678bc049440/work-runtime-2.7.1/AndroidManifest.xml:25:22-65
+25    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+25-->[androidx.work:work-runtime:2.7.1] /home/maroon/.gradle/caches/transforms-2/files-2.1/e157aadcacd7666db2f38678bc049440/work-runtime-2.7.1/AndroidManifest.xml:26:5-79
+25-->[androidx.work:work-runtime:2.7.1] /home/maroon/.gradle/caches/transforms-2/files-2.1/e157aadcacd7666db2f38678bc049440/work-runtime-2.7.1/AndroidManifest.xml:26:22-76
+26    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+26-->[androidx.work:work-runtime:2.7.1] /home/maroon/.gradle/caches/transforms-2/files-2.1/e157aadcacd7666db2f38678bc049440/work-runtime-2.7.1/AndroidManifest.xml:27:5-81
+26-->[androidx.work:work-runtime:2.7.1] /home/maroon/.gradle/caches/transforms-2/files-2.1/e157aadcacd7666db2f38678bc049440/work-runtime-2.7.1/AndroidManifest.xml:27:22-78
+27    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+27-->[androidx.work:work-runtime:2.7.1] /home/maroon/.gradle/caches/transforms-2/files-2.1/e157aadcacd7666db2f38678bc049440/work-runtime-2.7.1/AndroidManifest.xml:28:5-77
+27-->[androidx.work:work-runtime:2.7.1] /home/maroon/.gradle/caches/transforms-2/files-2.1/e157aadcacd7666db2f38678bc049440/work-runtime-2.7.1/AndroidManifest.xml:28:22-74
 28
-29            <!--
-30                 Specifies an Android theme to apply to this Activity as soon as
-31                 the Android process has started. This theme is visible to the user
-32                 while the Flutter UI initializes. After that, this theme continues
-33                 to determine the Window background behind the Flutter UI.
-34            -->
-35            <meta-data
-35-->/home/maroon/Desktop/github/sion_inter/android/app/src/main/AndroidManifest.xml:17:13-20:17
-36                android:name="io.flutter.embedding.android.NormalTheme"
-36-->/home/maroon/Desktop/github/sion_inter/android/app/src/main/AndroidManifest.xml:18:15-70
-37                android:resource="@style/NormalTheme" />
-37-->/home/maroon/Desktop/github/sion_inter/android/app/src/main/AndroidManifest.xml:19:15-52
-38            <!--
-39                 Displays an Android View that continues showing the launch screen
-40                 Drawable until Flutter paints its first frame, then this splash
-41                 screen fades out. A splash screen is useful to avoid any visual
-42                 gap between the end of Android's launch screen and the painting of
-43                 Flutter's first frame.
-44            -->
-45            <meta-data
-45-->/home/maroon/Desktop/github/sion_inter/android/app/src/main/AndroidManifest.xml:26:13-29:17
-46                android:name="io.flutter.embedding.android.SplashScreenDrawable"
-46-->/home/maroon/Desktop/github/sion_inter/android/app/src/main/AndroidManifest.xml:27:15-79
-47                android:resource="@drawable/launch_background" />
-47-->/home/maroon/Desktop/github/sion_inter/android/app/src/main/AndroidManifest.xml:28:15-61
-48
-49            <intent-filter>
-49-->/home/maroon/Desktop/github/sion_inter/android/app/src/main/AndroidManifest.xml:30:13-33:29
-50                <action android:name="android.intent.action.MAIN" />
-50-->/home/maroon/Desktop/github/sion_inter/android/app/src/main/AndroidManifest.xml:31:17-68
-50-->/home/maroon/Desktop/github/sion_inter/android/app/src/main/AndroidManifest.xml:31:25-66
-51
-52                <category android:name="android.intent.category.LAUNCHER" />
-52-->/home/maroon/Desktop/github/sion_inter/android/app/src/main/AndroidManifest.xml:32:17-76
-52-->/home/maroon/Desktop/github/sion_inter/android/app/src/main/AndroidManifest.xml:32:27-74
-53            </intent-filter>
-54        </activity>
-55        <!--
-56             Don't delete the meta-data below.
-57             This is used by the Flutter tool to generate GeneratedPluginRegistrant.java
-58        -->
-59        <meta-data
-59-->/home/maroon/Desktop/github/sion_inter/android/app/src/main/AndroidManifest.xml:37:9-39:33
-60            android:name="flutterEmbedding"
-60-->/home/maroon/Desktop/github/sion_inter/android/app/src/main/AndroidManifest.xml:38:13-44
-61            android:value="2" />
-61-->/home/maroon/Desktop/github/sion_inter/android/app/src/main/AndroidManifest.xml:39:13-30
-62    </application>
-63
-64</manifest>
+29    <application
+29-->/home/maroon/Desktop/github/sion_inter/android/app/src/main/AndroidManifest.xml:8:4-77:19
+30        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+30-->[androidx.core:core:1.6.0] /home/maroon/.gradle/caches/transforms-2/files-2.1/5f663b08eec19eef9a9d1af662d9025e/core-1.6.0/AndroidManifest.xml:24:18-86
+31        android:debuggable="true"
+32        android:icon="@mipmap/ic_launcher"
+32-->/home/maroon/Desktop/github/sion_inter/android/app/src/main/AndroidManifest.xml:10:9-43
+33        android:label="sion_inter" >
+33-->/home/maroon/Desktop/github/sion_inter/android/app/src/main/AndroidManifest.xml:9:9-35
+34        <activity
+34-->/home/maroon/Desktop/github/sion_inter/android/app/src/main/AndroidManifest.xml:12:9-40:20
+35            android:name="com.mcleaw.sion_inter.MainActivity"
+35-->/home/maroon/Desktop/github/sion_inter/android/app/src/main/AndroidManifest.xml:13:13-41
+36            android:configChanges="orientation|keyboardHidden|keyboard|screenSize|smallestScreenSize|locale|layoutDirection|fontScale|screenLayout|density|uiMode"
+36-->/home/maroon/Desktop/github/sion_inter/android/app/src/main/AndroidManifest.xml:16:13-163
+37            android:hardwareAccelerated="true"
+37-->/home/maroon/Desktop/github/sion_inter/android/app/src/main/AndroidManifest.xml:17:13-47
+38            android:launchMode="singleTop"
+38-->/home/maroon/Desktop/github/sion_inter/android/app/src/main/AndroidManifest.xml:14:13-43
+39            android:theme="@style/LaunchTheme"
+39-->/home/maroon/Desktop/github/sion_inter/android/app/src/main/AndroidManifest.xml:15:13-47
+40            android:windowSoftInputMode="adjustResize" >
+40-->/home/maroon/Desktop/github/sion_inter/android/app/src/main/AndroidManifest.xml:18:13-55
+41
+42            <!--
+43                 Specifies an Android theme to apply to this Activity as soon as
+44                 the Android process has started. This theme is visible to the user
+45                 while the Flutter UI initializes. After that, this theme continues
+46                 to determine the Window background behind the Flutter UI.
+47            -->
+48            <meta-data
+48-->/home/maroon/Desktop/github/sion_inter/android/app/src/main/AndroidManifest.xml:23:13-26:17
+49                android:name="io.flutter.embedding.android.NormalTheme"
+49-->/home/maroon/Desktop/github/sion_inter/android/app/src/main/AndroidManifest.xml:24:15-70
+50                android:resource="@style/NormalTheme" />
+50-->/home/maroon/Desktop/github/sion_inter/android/app/src/main/AndroidManifest.xml:25:15-52
+51            <!--
+52                 Displays an Android View that continues showing the launch screen
+53                 Drawable until Flutter paints its first frame, then this splash
+54                 screen fades out. A splash screen is useful to avoid any visual
+55                 gap between the end of Android's launch screen and the painting of
+56                 Flutter's first frame.
+57            -->
+58            <meta-data
+58-->/home/maroon/Desktop/github/sion_inter/android/app/src/main/AndroidManifest.xml:32:13-35:17
+59                android:name="io.flutter.embedding.android.SplashScreenDrawable"
+59-->/home/maroon/Desktop/github/sion_inter/android/app/src/main/AndroidManifest.xml:33:15-79
+60                android:resource="@drawable/launch_background" />
+60-->/home/maroon/Desktop/github/sion_inter/android/app/src/main/AndroidManifest.xml:34:15-61
+61
+62            <intent-filter>
+62-->/home/maroon/Desktop/github/sion_inter/android/app/src/main/AndroidManifest.xml:36:13-39:29
+63                <action android:name="android.intent.action.MAIN" />
+63-->/home/maroon/Desktop/github/sion_inter/android/app/src/main/AndroidManifest.xml:37:17-68
+63-->/home/maroon/Desktop/github/sion_inter/android/app/src/main/AndroidManifest.xml:37:25-66
+64
+65                <category android:name="android.intent.category.LAUNCHER" />
+65-->/home/maroon/Desktop/github/sion_inter/android/app/src/main/AndroidManifest.xml:38:17-76
+65-->/home/maroon/Desktop/github/sion_inter/android/app/src/main/AndroidManifest.xml:38:27-74
+66            </intent-filter>
+67        </activity>
+68        <!--
+69             Don't delete the meta-data below.
+70             This is used by the Flutter tool to generate GeneratedPluginRegistrant.java
+71        -->
+72        <provider
+73            android:name="vn.hunghd.flutterdownloader.DownloadedFileProvider"
+74            android:authorities="com.mcleaw.sion_inter.flutter_downloader.provider"
+75            android:exported="false"
+76            android:grantUriPermissions="true" >
+77            <meta-data
+78                android:name="android.support.FILE_PROVIDER_PATHS"
+79                android:resource="@xml/provider_paths" />
+80        </provider>
+81        <provider
+82            android:name="androidx.startup.InitializationProvider"
+83            android:authorities="com.mcleaw.sion_inter.androidx-startup"
+84            android:exported="false" >
+85        </provider>
+86
+87        <!-- declare customized Initializer -->
+88        <provider
+89            android:name="vn.hunghd.flutterdownloader.FlutterDownloaderInitializer"
+90            android:authorities="com.mcleaw.sion_inter.flutter-downloader-init"
+91            android:exported="false" >
+92
+93            <!-- changes this number to configure the maximum number of concurrent tasks -->
+94            <meta-data
+95                android:name="vn.hunghd.flutterdownloader.MAX_CONCURRENT_TASKS"
+96                android:value="5" />
+97        </provider>
+98
+99        <meta-data
+99-->/home/maroon/Desktop/github/sion_inter/android/app/src/main/AndroidManifest.xml:74:9-76:33
+100            android:name="flutterEmbedding"
+100-->/home/maroon/Desktop/github/sion_inter/android/app/src/main/AndroidManifest.xml:75:13-44
+101            android:value="2" />
+101-->/home/maroon/Desktop/github/sion_inter/android/app/src/main/AndroidManifest.xml:76:13-30
+102
+103        <service
+103-->[androidx.work:work-runtime:2.7.1] /home/maroon/.gradle/caches/transforms-2/files-2.1/e157aadcacd7666db2f38678bc049440/work-runtime-2.7.1/AndroidManifest.xml:41:9-46:35
+104            android:name="androidx.work.impl.background.systemalarm.SystemAlarmService"
+104-->[androidx.work:work-runtime:2.7.1] /home/maroon/.gradle/caches/transforms-2/files-2.1/e157aadcacd7666db2f38678bc049440/work-runtime-2.7.1/AndroidManifest.xml:42:13-88
+105            android:directBootAware="false"
+105-->[androidx.work:work-runtime:2.7.1] /home/maroon/.gradle/caches/transforms-2/files-2.1/e157aadcacd7666db2f38678bc049440/work-runtime-2.7.1/AndroidManifest.xml:43:13-44
+106            android:enabled="@bool/enable_system_alarm_service_default"
+106-->[androidx.work:work-runtime:2.7.1] /home/maroon/.gradle/caches/transforms-2/files-2.1/e157aadcacd7666db2f38678bc049440/work-runtime-2.7.1/AndroidManifest.xml:44:13-72
+107            android:exported="false" />
+107-->[androidx.work:work-runtime:2.7.1] /home/maroon/.gradle/caches/transforms-2/files-2.1/e157aadcacd7666db2f38678bc049440/work-runtime-2.7.1/AndroidManifest.xml:45:13-37
+108        <service
+108-->[androidx.work:work-runtime:2.7.1] /home/maroon/.gradle/caches/transforms-2/files-2.1/e157aadcacd7666db2f38678bc049440/work-runtime-2.7.1/AndroidManifest.xml:47:9-53:35
+109            android:name="androidx.work.impl.background.systemjob.SystemJobService"
+109-->[androidx.work:work-runtime:2.7.1] /home/maroon/.gradle/caches/transforms-2/files-2.1/e157aadcacd7666db2f38678bc049440/work-runtime-2.7.1/AndroidManifest.xml:48:13-84
+110            android:directBootAware="false"
+110-->[androidx.work:work-runtime:2.7.1] /home/maroon/.gradle/caches/transforms-2/files-2.1/e157aadcacd7666db2f38678bc049440/work-runtime-2.7.1/AndroidManifest.xml:49:13-44
+111            android:enabled="@bool/enable_system_job_service_default"
+111-->[androidx.work:work-runtime:2.7.1] /home/maroon/.gradle/caches/transforms-2/files-2.1/e157aadcacd7666db2f38678bc049440/work-runtime-2.7.1/AndroidManifest.xml:50:13-70
+112            android:exported="true"
+112-->[androidx.work:work-runtime:2.7.1] /home/maroon/.gradle/caches/transforms-2/files-2.1/e157aadcacd7666db2f38678bc049440/work-runtime-2.7.1/AndroidManifest.xml:51:13-36
+113            android:permission="android.permission.BIND_JOB_SERVICE" />
+113-->[androidx.work:work-runtime:2.7.1] /home/maroon/.gradle/caches/transforms-2/files-2.1/e157aadcacd7666db2f38678bc049440/work-runtime-2.7.1/AndroidManifest.xml:52:13-69
+114        <service
+114-->[androidx.work:work-runtime:2.7.1] /home/maroon/.gradle/caches/transforms-2/files-2.1/e157aadcacd7666db2f38678bc049440/work-runtime-2.7.1/AndroidManifest.xml:54:9-59:35
+115            android:name="androidx.work.impl.foreground.SystemForegroundService"
+115-->[androidx.work:work-runtime:2.7.1] /home/maroon/.gradle/caches/transforms-2/files-2.1/e157aadcacd7666db2f38678bc049440/work-runtime-2.7.1/AndroidManifest.xml:55:13-81
+116            android:directBootAware="false"
+116-->[androidx.work:work-runtime:2.7.1] /home/maroon/.gradle/caches/transforms-2/files-2.1/e157aadcacd7666db2f38678bc049440/work-runtime-2.7.1/AndroidManifest.xml:56:13-44
+117            android:enabled="@bool/enable_system_foreground_service_default"
+117-->[androidx.work:work-runtime:2.7.1] /home/maroon/.gradle/caches/transforms-2/files-2.1/e157aadcacd7666db2f38678bc049440/work-runtime-2.7.1/AndroidManifest.xml:57:13-77
+118            android:exported="false" />
+118-->[androidx.work:work-runtime:2.7.1] /home/maroon/.gradle/caches/transforms-2/files-2.1/e157aadcacd7666db2f38678bc049440/work-runtime-2.7.1/AndroidManifest.xml:58:13-37
+119
+120        <receiver
+120-->[androidx.work:work-runtime:2.7.1] /home/maroon/.gradle/caches/transforms-2/files-2.1/e157aadcacd7666db2f38678bc049440/work-runtime-2.7.1/AndroidManifest.xml:61:9-66:35
+121            android:name="androidx.work.impl.utils.ForceStopRunnable$BroadcastReceiver"
+121-->[androidx.work:work-runtime:2.7.1] /home/maroon/.gradle/caches/transforms-2/files-2.1/e157aadcacd7666db2f38678bc049440/work-runtime-2.7.1/AndroidManifest.xml:62:13-88
+122            android:directBootAware="false"
+122-->[androidx.work:work-runtime:2.7.1] /home/maroon/.gradle/caches/transforms-2/files-2.1/e157aadcacd7666db2f38678bc049440/work-runtime-2.7.1/AndroidManifest.xml:63:13-44
+123            android:enabled="true"
+123-->[androidx.work:work-runtime:2.7.1] /home/maroon/.gradle/caches/transforms-2/files-2.1/e157aadcacd7666db2f38678bc049440/work-runtime-2.7.1/AndroidManifest.xml:64:13-35
+124            android:exported="false" />
+124-->[androidx.work:work-runtime:2.7.1] /home/maroon/.gradle/caches/transforms-2/files-2.1/e157aadcacd7666db2f38678bc049440/work-runtime-2.7.1/AndroidManifest.xml:65:13-37
+125        <receiver
+125-->[androidx.work:work-runtime:2.7.1] /home/maroon/.gradle/caches/transforms-2/files-2.1/e157aadcacd7666db2f38678bc049440/work-runtime-2.7.1/AndroidManifest.xml:67:9-77:20
+126            android:name="androidx.work.impl.background.systemalarm.ConstraintProxy$BatteryChargingProxy"
+126-->[androidx.work:work-runtime:2.7.1] /home/maroon/.gradle/caches/transforms-2/files-2.1/e157aadcacd7666db2f38678bc049440/work-runtime-2.7.1/AndroidManifest.xml:68:13-106
+127            android:directBootAware="false"
+127-->[androidx.work:work-runtime:2.7.1] /home/maroon/.gradle/caches/transforms-2/files-2.1/e157aadcacd7666db2f38678bc049440/work-runtime-2.7.1/AndroidManifest.xml:69:13-44
+128            android:enabled="false"
+128-->[androidx.work:work-runtime:2.7.1] /home/maroon/.gradle/caches/transforms-2/files-2.1/e157aadcacd7666db2f38678bc049440/work-runtime-2.7.1/AndroidManifest.xml:70:13-36
+129            android:exported="false" >
+129-->[androidx.work:work-runtime:2.7.1] /home/maroon/.gradle/caches/transforms-2/files-2.1/e157aadcacd7666db2f38678bc049440/work-runtime-2.7.1/AndroidManifest.xml:71:13-37
+130            <intent-filter>
+130-->[androidx.work:work-runtime:2.7.1] /home/maroon/.gradle/caches/transforms-2/files-2.1/e157aadcacd7666db2f38678bc049440/work-runtime-2.7.1/AndroidManifest.xml:73:13-76:29
+131                <action android:name="android.intent.action.ACTION_POWER_CONNECTED" />
+131-->[androidx.work:work-runtime:2.7.1] /home/maroon/.gradle/caches/transforms-2/files-2.1/e157aadcacd7666db2f38678bc049440/work-runtime-2.7.1/AndroidManifest.xml:74:17-87
+131-->[androidx.work:work-runtime:2.7.1] /home/maroon/.gradle/caches/transforms-2/files-2.1/e157aadcacd7666db2f38678bc049440/work-runtime-2.7.1/AndroidManifest.xml:74:25-84
+132                <action android:name="android.intent.action.ACTION_POWER_DISCONNECTED" />
+132-->[androidx.work:work-runtime:2.7.1] /home/maroon/.gradle/caches/transforms-2/files-2.1/e157aadcacd7666db2f38678bc049440/work-runtime-2.7.1/AndroidManifest.xml:75:17-90
+132-->[androidx.work:work-runtime:2.7.1] /home/maroon/.gradle/caches/transforms-2/files-2.1/e157aadcacd7666db2f38678bc049440/work-runtime-2.7.1/AndroidManifest.xml:75:25-87
+133            </intent-filter>
+134        </receiver>
+135        <receiver
+135-->[androidx.work:work-runtime:2.7.1] /home/maroon/.gradle/caches/transforms-2/files-2.1/e157aadcacd7666db2f38678bc049440/work-runtime-2.7.1/AndroidManifest.xml:78:9-88:20
+136            android:name="androidx.work.impl.background.systemalarm.ConstraintProxy$BatteryNotLowProxy"
+136-->[androidx.work:work-runtime:2.7.1] /home/maroon/.gradle/caches/transforms-2/files-2.1/e157aadcacd7666db2f38678bc049440/work-runtime-2.7.1/AndroidManifest.xml:79:13-104
+137            android:directBootAware="false"
+137-->[androidx.work:work-runtime:2.7.1] /home/maroon/.gradle/caches/transforms-2/files-2.1/e157aadcacd7666db2f38678bc049440/work-runtime-2.7.1/AndroidManifest.xml:80:13-44
+138            android:enabled="false"
+138-->[androidx.work:work-runtime:2.7.1] /home/maroon/.gradle/caches/transforms-2/files-2.1/e157aadcacd7666db2f38678bc049440/work-runtime-2.7.1/AndroidManifest.xml:81:13-36
+139            android:exported="false" >
+139-->[androidx.work:work-runtime:2.7.1] /home/maroon/.gradle/caches/transforms-2/files-2.1/e157aadcacd7666db2f38678bc049440/work-runtime-2.7.1/AndroidManifest.xml:82:13-37
+140            <intent-filter>
+140-->[androidx.work:work-runtime:2.7.1] /home/maroon/.gradle/caches/transforms-2/files-2.1/e157aadcacd7666db2f38678bc049440/work-runtime-2.7.1/AndroidManifest.xml:84:13-87:29
+141                <action android:name="android.intent.action.BATTERY_OKAY" />
+141-->[androidx.work:work-runtime:2.7.1] /home/maroon/.gradle/caches/transforms-2/files-2.1/e157aadcacd7666db2f38678bc049440/work-runtime-2.7.1/AndroidManifest.xml:85:17-77
+141-->[androidx.work:work-runtime:2.7.1] /home/maroon/.gradle/caches/transforms-2/files-2.1/e157aadcacd7666db2f38678bc049440/work-runtime-2.7.1/AndroidManifest.xml:85:25-74
+142                <action android:name="android.intent.action.BATTERY_LOW" />
+142-->[androidx.work:work-runtime:2.7.1] /home/maroon/.gradle/caches/transforms-2/files-2.1/e157aadcacd7666db2f38678bc049440/work-runtime-2.7.1/AndroidManifest.xml:86:17-76
+142-->[androidx.work:work-runtime:2.7.1] /home/maroon/.gradle/caches/transforms-2/files-2.1/e157aadcacd7666db2f38678bc049440/work-runtime-2.7.1/AndroidManifest.xml:86:25-73
+143            </intent-filter>
+144        </receiver>
+145        <receiver
+145-->[androidx.work:work-runtime:2.7.1] /home/maroon/.gradle/caches/transforms-2/files-2.1/e157aadcacd7666db2f38678bc049440/work-runtime-2.7.1/AndroidManifest.xml:89:9-99:20
+146            android:name="androidx.work.impl.background.systemalarm.ConstraintProxy$StorageNotLowProxy"
+146-->[androidx.work:work-runtime:2.7.1] /home/maroon/.gradle/caches/transforms-2/files-2.1/e157aadcacd7666db2f38678bc049440/work-runtime-2.7.1/AndroidManifest.xml:90:13-104
+147            android:directBootAware="false"
+147-->[androidx.work:work-runtime:2.7.1] /home/maroon/.gradle/caches/transforms-2/files-2.1/e157aadcacd7666db2f38678bc049440/work-runtime-2.7.1/AndroidManifest.xml:91:13-44
+148            android:enabled="false"
+148-->[androidx.work:work-runtime:2.7.1] /home/maroon/.gradle/caches/transforms-2/files-2.1/e157aadcacd7666db2f38678bc049440/work-runtime-2.7.1/AndroidManifest.xml:92:13-36
+149            android:exported="false" >
+149-->[androidx.work:work-runtime:2.7.1] /home/maroon/.gradle/caches/transforms-2/files-2.1/e157aadcacd7666db2f38678bc049440/work-runtime-2.7.1/AndroidManifest.xml:93:13-37
+150            <intent-filter>
+150-->[androidx.work:work-runtime:2.7.1] /home/maroon/.gradle/caches/transforms-2/files-2.1/e157aadcacd7666db2f38678bc049440/work-runtime-2.7.1/AndroidManifest.xml:95:13-98:29
+151                <action android:name="android.intent.action.DEVICE_STORAGE_LOW" />
+151-->[androidx.work:work-runtime:2.7.1] /home/maroon/.gradle/caches/transforms-2/files-2.1/e157aadcacd7666db2f38678bc049440/work-runtime-2.7.1/AndroidManifest.xml:96:17-83
+151-->[androidx.work:work-runtime:2.7.1] /home/maroon/.gradle/caches/transforms-2/files-2.1/e157aadcacd7666db2f38678bc049440/work-runtime-2.7.1/AndroidManifest.xml:96:25-80
+152                <action android:name="android.intent.action.DEVICE_STORAGE_OK" />
+152-->[androidx.work:work-runtime:2.7.1] /home/maroon/.gradle/caches/transforms-2/files-2.1/e157aadcacd7666db2f38678bc049440/work-runtime-2.7.1/AndroidManifest.xml:97:17-82
+152-->[androidx.work:work-runtime:2.7.1] /home/maroon/.gradle/caches/transforms-2/files-2.1/e157aadcacd7666db2f38678bc049440/work-runtime-2.7.1/AndroidManifest.xml:97:25-79
+153            </intent-filter>
+154        </receiver>
+155        <receiver
+155-->[androidx.work:work-runtime:2.7.1] /home/maroon/.gradle/caches/transforms-2/files-2.1/e157aadcacd7666db2f38678bc049440/work-runtime-2.7.1/AndroidManifest.xml:100:9-109:20
+156            android:name="androidx.work.impl.background.systemalarm.ConstraintProxy$NetworkStateProxy"
+156-->[androidx.work:work-runtime:2.7.1] /home/maroon/.gradle/caches/transforms-2/files-2.1/e157aadcacd7666db2f38678bc049440/work-runtime-2.7.1/AndroidManifest.xml:101:13-103
+157            android:directBootAware="false"
+157-->[androidx.work:work-runtime:2.7.1] /home/maroon/.gradle/caches/transforms-2/files-2.1/e157aadcacd7666db2f38678bc049440/work-runtime-2.7.1/AndroidManifest.xml:102:13-44
+158            android:enabled="false"
+158-->[androidx.work:work-runtime:2.7.1] /home/maroon/.gradle/caches/transforms-2/files-2.1/e157aadcacd7666db2f38678bc049440/work-runtime-2.7.1/AndroidManifest.xml:103:13-36
+159            android:exported="false" >
+159-->[androidx.work:work-runtime:2.7.1] /home/maroon/.gradle/caches/transforms-2/files-2.1/e157aadcacd7666db2f38678bc049440/work-runtime-2.7.1/AndroidManifest.xml:104:13-37
+160            <intent-filter>
+160-->[androidx.work:work-runtime:2.7.1] /home/maroon/.gradle/caches/transforms-2/files-2.1/e157aadcacd7666db2f38678bc049440/work-runtime-2.7.1/AndroidManifest.xml:106:13-108:29
+161                <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
+161-->[androidx.work:work-runtime:2.7.1] /home/maroon/.gradle/caches/transforms-2/files-2.1/e157aadcacd7666db2f38678bc049440/work-runtime-2.7.1/AndroidManifest.xml:107:17-79
+161-->[androidx.work:work-runtime:2.7.1] /home/maroon/.gradle/caches/transforms-2/files-2.1/e157aadcacd7666db2f38678bc049440/work-runtime-2.7.1/AndroidManifest.xml:107:25-76
+162            </intent-filter>
+163        </receiver>
+164        <receiver
+164-->[androidx.work:work-runtime:2.7.1] /home/maroon/.gradle/caches/transforms-2/files-2.1/e157aadcacd7666db2f38678bc049440/work-runtime-2.7.1/AndroidManifest.xml:110:9-121:20
+165            android:name="androidx.work.impl.background.systemalarm.RescheduleReceiver"
+165-->[androidx.work:work-runtime:2.7.1] /home/maroon/.gradle/caches/transforms-2/files-2.1/e157aadcacd7666db2f38678bc049440/work-runtime-2.7.1/AndroidManifest.xml:111:13-88
+166            android:directBootAware="false"
+166-->[androidx.work:work-runtime:2.7.1] /home/maroon/.gradle/caches/transforms-2/files-2.1/e157aadcacd7666db2f38678bc049440/work-runtime-2.7.1/AndroidManifest.xml:112:13-44
+167            android:enabled="false"
+167-->[androidx.work:work-runtime:2.7.1] /home/maroon/.gradle/caches/transforms-2/files-2.1/e157aadcacd7666db2f38678bc049440/work-runtime-2.7.1/AndroidManifest.xml:113:13-36
+168            android:exported="false" >
+168-->[androidx.work:work-runtime:2.7.1] /home/maroon/.gradle/caches/transforms-2/files-2.1/e157aadcacd7666db2f38678bc049440/work-runtime-2.7.1/AndroidManifest.xml:114:13-37
+169            <intent-filter>
+169-->[androidx.work:work-runtime:2.7.1] /home/maroon/.gradle/caches/transforms-2/files-2.1/e157aadcacd7666db2f38678bc049440/work-runtime-2.7.1/AndroidManifest.xml:116:13-120:29
+170                <action android:name="android.intent.action.BOOT_COMPLETED" />
+170-->[androidx.work:work-runtime:2.7.1] /home/maroon/.gradle/caches/transforms-2/files-2.1/e157aadcacd7666db2f38678bc049440/work-runtime-2.7.1/AndroidManifest.xml:117:17-79
+170-->[androidx.work:work-runtime:2.7.1] /home/maroon/.gradle/caches/transforms-2/files-2.1/e157aadcacd7666db2f38678bc049440/work-runtime-2.7.1/AndroidManifest.xml:117:25-76
+171                <action android:name="android.intent.action.TIME_SET" />
+171-->[androidx.work:work-runtime:2.7.1] /home/maroon/.gradle/caches/transforms-2/files-2.1/e157aadcacd7666db2f38678bc049440/work-runtime-2.7.1/AndroidManifest.xml:118:17-73
+171-->[androidx.work:work-runtime:2.7.1] /home/maroon/.gradle/caches/transforms-2/files-2.1/e157aadcacd7666db2f38678bc049440/work-runtime-2.7.1/AndroidManifest.xml:118:25-70
+172                <action android:name="android.intent.action.TIMEZONE_CHANGED" />
+172-->[androidx.work:work-runtime:2.7.1] /home/maroon/.gradle/caches/transforms-2/files-2.1/e157aadcacd7666db2f38678bc049440/work-runtime-2.7.1/AndroidManifest.xml:119:17-81
+172-->[androidx.work:work-runtime:2.7.1] /home/maroon/.gradle/caches/transforms-2/files-2.1/e157aadcacd7666db2f38678bc049440/work-runtime-2.7.1/AndroidManifest.xml:119:25-78
+173            </intent-filter>
+174        </receiver>
+175        <receiver
+175-->[androidx.work:work-runtime:2.7.1] /home/maroon/.gradle/caches/transforms-2/files-2.1/e157aadcacd7666db2f38678bc049440/work-runtime-2.7.1/AndroidManifest.xml:122:9-131:20
+176            android:name="androidx.work.impl.background.systemalarm.ConstraintProxyUpdateReceiver"
+176-->[androidx.work:work-runtime:2.7.1] /home/maroon/.gradle/caches/transforms-2/files-2.1/e157aadcacd7666db2f38678bc049440/work-runtime-2.7.1/AndroidManifest.xml:123:13-99
+177            android:directBootAware="false"
+177-->[androidx.work:work-runtime:2.7.1] /home/maroon/.gradle/caches/transforms-2/files-2.1/e157aadcacd7666db2f38678bc049440/work-runtime-2.7.1/AndroidManifest.xml:124:13-44
+178            android:enabled="@bool/enable_system_alarm_service_default"
+178-->[androidx.work:work-runtime:2.7.1] /home/maroon/.gradle/caches/transforms-2/files-2.1/e157aadcacd7666db2f38678bc049440/work-runtime-2.7.1/AndroidManifest.xml:125:13-72
+179            android:exported="false" >
+179-->[androidx.work:work-runtime:2.7.1] /home/maroon/.gradle/caches/transforms-2/files-2.1/e157aadcacd7666db2f38678bc049440/work-runtime-2.7.1/AndroidManifest.xml:126:13-37
+180            <intent-filter>
+180-->[androidx.work:work-runtime:2.7.1] /home/maroon/.gradle/caches/transforms-2/files-2.1/e157aadcacd7666db2f38678bc049440/work-runtime-2.7.1/AndroidManifest.xml:128:13-130:29
+181                <action android:name="androidx.work.impl.background.systemalarm.UpdateProxies" />
+181-->[androidx.work:work-runtime:2.7.1] /home/maroon/.gradle/caches/transforms-2/files-2.1/e157aadcacd7666db2f38678bc049440/work-runtime-2.7.1/AndroidManifest.xml:129:17-98
+181-->[androidx.work:work-runtime:2.7.1] /home/maroon/.gradle/caches/transforms-2/files-2.1/e157aadcacd7666db2f38678bc049440/work-runtime-2.7.1/AndroidManifest.xml:129:25-95
+182            </intent-filter>
+183        </receiver>
+184        <receiver
+184-->[androidx.work:work-runtime:2.7.1] /home/maroon/.gradle/caches/transforms-2/files-2.1/e157aadcacd7666db2f38678bc049440/work-runtime-2.7.1/AndroidManifest.xml:132:9-142:20
+185            android:name="androidx.work.impl.diagnostics.DiagnosticsReceiver"
+185-->[androidx.work:work-runtime:2.7.1] /home/maroon/.gradle/caches/transforms-2/files-2.1/e157aadcacd7666db2f38678bc049440/work-runtime-2.7.1/AndroidManifest.xml:133:13-78
+186            android:directBootAware="false"
+186-->[androidx.work:work-runtime:2.7.1] /home/maroon/.gradle/caches/transforms-2/files-2.1/e157aadcacd7666db2f38678bc049440/work-runtime-2.7.1/AndroidManifest.xml:134:13-44
+187            android:enabled="true"
+187-->[androidx.work:work-runtime:2.7.1] /home/maroon/.gradle/caches/transforms-2/files-2.1/e157aadcacd7666db2f38678bc049440/work-runtime-2.7.1/AndroidManifest.xml:135:13-35
+188            android:exported="true"
+188-->[androidx.work:work-runtime:2.7.1] /home/maroon/.gradle/caches/transforms-2/files-2.1/e157aadcacd7666db2f38678bc049440/work-runtime-2.7.1/AndroidManifest.xml:136:13-36
+189            android:permission="android.permission.DUMP" >
+189-->[androidx.work:work-runtime:2.7.1] /home/maroon/.gradle/caches/transforms-2/files-2.1/e157aadcacd7666db2f38678bc049440/work-runtime-2.7.1/AndroidManifest.xml:137:13-57
+190            <intent-filter>
+190-->[androidx.work:work-runtime:2.7.1] /home/maroon/.gradle/caches/transforms-2/files-2.1/e157aadcacd7666db2f38678bc049440/work-runtime-2.7.1/AndroidManifest.xml:139:13-141:29
+191                <action android:name="androidx.work.diagnostics.REQUEST_DIAGNOSTICS" />
+191-->[androidx.work:work-runtime:2.7.1] /home/maroon/.gradle/caches/transforms-2/files-2.1/e157aadcacd7666db2f38678bc049440/work-runtime-2.7.1/AndroidManifest.xml:140:17-88
+191-->[androidx.work:work-runtime:2.7.1] /home/maroon/.gradle/caches/transforms-2/files-2.1/e157aadcacd7666db2f38678bc049440/work-runtime-2.7.1/AndroidManifest.xml:140:25-85
+192            </intent-filter>
+193        </receiver>
+194
+195        <service
+195-->[androidx.room:room-runtime:2.2.5] /home/maroon/.gradle/caches/transforms-2/files-2.1/0a89fa6730b81f04d1338cd90d9af60b/room-runtime-2.2.5/AndroidManifest.xml:25:9-28:40
+196            android:name="androidx.room.MultiInstanceInvalidationService"
+196-->[androidx.room:room-runtime:2.2.5] /home/maroon/.gradle/caches/transforms-2/files-2.1/0a89fa6730b81f04d1338cd90d9af60b/room-runtime-2.2.5/AndroidManifest.xml:26:13-74
+197            android:directBootAware="true"
+197-->[androidx.room:room-runtime:2.2.5] /home/maroon/.gradle/caches/transforms-2/files-2.1/0a89fa6730b81f04d1338cd90d9af60b/room-runtime-2.2.5/AndroidManifest.xml:27:13-43
+198            android:exported="false" />
+198-->[androidx.room:room-runtime:2.2.5] /home/maroon/.gradle/caches/transforms-2/files-2.1/0a89fa6730b81f04d1338cd90d9af60b/room-runtime-2.2.5/AndroidManifest.xml:28:13-37
+199    </application>
+200
+201</manifest>
