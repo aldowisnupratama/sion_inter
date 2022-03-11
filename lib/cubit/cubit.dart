@@ -4,3 +4,8 @@ export 'biodata/biodata_cubit.dart';
 export 'announcement/announcement_cubit.dart';
 export 'GPA/gpa_cubit.dart';
 export 'final_test/final_test_cubit.dart';
+export 'update_password/update_password_cubit.dart';
+export 'update_biodata/update_biodata_cubit.dart';
+export 'schedule/schedule_cubit.dart';
+export 'lecture/lecture_selector_cubit.dart';
+export 'selected_day/selected_day_cubit.dart';

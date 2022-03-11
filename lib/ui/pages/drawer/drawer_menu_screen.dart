@@ -32,7 +32,7 @@ class _DrawerMenuState extends State<DrawerMenu> {
   }
 
   void clearPref() async {
-    await pref.clear();
+    await pref.remove("token");
   }
 
   @override
@@ -124,6 +124,8 @@ class _DrawerMenuState extends State<DrawerMenu> {
                   onTap: () {
                     BlocProvider.of<PageCubit>(context)
                         .changePage(SchedulePageState(title: "Schedule Page"));
+                    BlocProvider.of<ScheduleCubit>(context).fetchSchedule();
+
                     widget.drawerController.close!();
                   },
                 ),

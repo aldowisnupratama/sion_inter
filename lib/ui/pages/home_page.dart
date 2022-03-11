@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_spinkit/flutter_spinkit.dart';
 import 'package:flutter_zoom_drawer/flutter_zoom_drawer.dart';
+
 import 'package:sion_inter/cubit/cubit.dart';
 import 'package:sion_inter/model/model.dart';
 import 'package:sion_inter/shared/shared.dart';
@@ -38,7 +39,13 @@ class _HomePageState extends State<HomePage> {
 
     return Scaffold(
       appBar: AppBar(
-        actions: [new IconButton(onPressed: () {}, icon: Icon(Icons.search))],
+        actions: [
+          new IconButton(
+              onPressed: () {
+                Navigator.pushNamed(context, findPages);
+              },
+              icon: Icon(Icons.search))
+        ],
         backgroundColor: kPrimaryColor,
         leading: InkWell(
             onTap: () => widget.drawerController.toggle!(),
@@ -77,10 +84,29 @@ class _HomePageState extends State<HomePage> {
             );
           }
           if (state is SchedulePageState) {
-            return Container(
-              child: Center(
-                child: Text("Schedule page"),
-              ),
+            return BlocBuilder<ScheduleCubit, ScheduleState>(
+              builder: (context, state) {
+                if (state is ScheduleLoad) {
+                  return Center(
+                    child: SpinKitFadingCircle(color: kPrimaryColor),
+                  );
+                }
+                if (state is ScheduleFail) {
+                  return Center(
+                    child: Text("${state.errorMessage}"),
+                  );
+                }
+                if (state is ScheduleSuccess) {
+                  return SchedulePage(
+                    listofJadwalKuliah: state.listOfJadwalKuliah,
+                  );
+                }
+                return Container(
+                  child: Center(
+                    child: Text("Schedule page"),
+                  ),
+                );
+              },
             );
           }
           if (state is GPAPageState) {

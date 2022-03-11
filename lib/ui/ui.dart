@@ -17,3 +17,7 @@ export 'widgets/password_textfield.dart';
 export 'pages/announcement_page.dart';
 export 'widgets/dowloader_widget.dart';
 export 'widgets/costume_button_b.dart';
+export 'pages/schedule_pages.dart';
+export 'widgets/button_day_widgets.dart';
+export 'widgets/schedule_card.dart';
+export 'widgets/nol_schedule_card.dart';

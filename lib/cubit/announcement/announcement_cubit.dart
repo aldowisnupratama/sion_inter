@@ -12,9 +12,7 @@ class AnnouncementCubit extends Cubit<AnnouncementState> {
     try {
       emit(AnnouncementLoading());
       var response = await AnnouncementService().fetchAnnouncement();
-      print("response ni bos : ${response.pengumuman}");
-      print("message == ${response.message}");
-      print("result == ${response.result}");
+
       if (response.pengumuman!.isNotEmpty) {
         emit(AnnouncementValid(response.pengumuman));
       } else {

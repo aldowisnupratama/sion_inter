@@ -6,3 +6,5 @@ const String mainScreenPath = "/mainScreen";
 const String drawerMenuScreenPath = "/drawerScreenMenu";
 const String homeScreenPath = "/homeScreenPath";
 const String updatePasswordScreenPath = "/biodataScreen/updatePasswordScreen";
+const String updateBiodataScreenPath = "/biodataScreen/updateBiodataScreen";
+const String findPages = "/findpages";

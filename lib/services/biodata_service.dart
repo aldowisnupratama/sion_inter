@@ -22,4 +22,40 @@ class BiodataService {
       throw Exception(e);
     }
   }
+
+  Future<UpdateBiodataModel> updateBiodata(
+      String email,
+      String nisn,
+      String address,
+      String phoneNumber,
+      String faceboook,
+      String twitter) async {
+    var prefs = await SharedPreferences.getInstance();
+    Map<String, String> data = {
+      "email": email,
+      "nisn": nisn,
+      "alamat": address,
+      "facebook": faceboook,
+      "twitter": twitter,
+      "ponsel": phoneNumber,
+    };
+    Uri _uri = Uri.https(baseApi, updateBiodataApi, data);
+    var token = prefs.get("token");
+    print(
+        "ini objectnya $email , $nisn , $phoneNumber, $address, $faceboook, $twitter");
+
+    try {
+      var updateBiodataResponse = await http.post(_uri, headers: {
+        "Content-Type": "application/json; charset=UTF-8",
+        "Charset": "utf-8",
+        "Authorization": "$token",
+      });
+
+      return UpdateBiodataModel.fromJson(
+          json.decode(updateBiodataResponse.body));
+    } catch (e) {
+      print("ini errornya : $e.toString()");
+      throw Exception(e.toString());
+    }
+  }
 }

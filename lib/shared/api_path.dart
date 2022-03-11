@@ -5,3 +5,7 @@ const String biodataApi = "/v1/international/biodata";
 const String gpaApi = "/v1/international/gpa";
 const String finalTestApi = "/v1/international/test";
 const String updatePasswordApi = "/v1/international/update_password";
+const String updateBiodataApi = "/v1/international/update_biodata";
+const String findMahasiswaApi = "/v1/findmhs";
+const String findDosenApi = "/v1/finddosen";
+const String scheduleApi = "/v1/international/schedule";

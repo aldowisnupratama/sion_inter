@@ -25,7 +25,6 @@ class _AnnoucementPageState extends State<AnnoucementPage> {
 
   @override
   void initState() {
-    // TODO: implement initState
     super.initState();
     image = DecorationImage(image: AssetImage("assets/images/stikom_home.png"));
     controller = ExpandedTileController();

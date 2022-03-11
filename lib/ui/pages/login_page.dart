@@ -106,6 +106,7 @@ class _LoginPageState extends State<LoginPage> {
             BlocConsumer<LoginCubit, LoginState>(
               listener: (context, state) {
                 if (state is LoginValid) {
+                  BlocProvider.of<AnnouncementCubit>(context).fetchPengumuman();
                   Navigator.pushReplacementNamed(context, mainScreenPath);
                 }
                 if (state is LoginInvalid) {
@@ -151,11 +152,9 @@ class _LoginPageState extends State<LoginPage> {
                     if (nimController.text.length == 9) {
                       if (passwordController.text.length >= 8 &&
                           passwordController.text.length <= 20) {
-                        context.read<LoginCubit>().loginPost(
+                        BlocProvider.of<LoginCubit>(context).loginPost(
                             nimController.text.trim(),
                             passwordController.text.trim());
-
-                        context.read<AnnouncementCubit>().fetchPengumuman();
                       } else {
                         showDialog(
                             context: context,

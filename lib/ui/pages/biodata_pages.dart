@@ -3,6 +3,8 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_spinkit/flutter_spinkit.dart';
 import 'package:sion_inter/cubit/cubit.dart';
 import 'package:sion_inter/shared/shared.dart';
+import 'package:sion_inter/ui/pages/update_biodata_page.dart';
+
 import 'package:sion_inter/ui/ui.dart';
 
 class BiodataPage extends StatefulWidget {
@@ -118,6 +120,11 @@ class _BiodataPageState extends State<BiodataPage> {
                               "${state.biodataModel.biodata?.tempatLahir} / ${state.biodataModel.biodata?.tanggalLahir}",
                           color: kBlackColor),
                       CostumeBiodataTile(
+                          itemName: "NISN",
+                          itemDetails:
+                              "${state.biodataModel.biodata?.nisn?.toLowerCase()}",
+                          color: kBlackColor),
+                      CostumeBiodataTile(
                           itemName: "Email",
                           itemDetails:
                               "${state.biodataModel.biodata?.email?.toLowerCase()}",
@@ -135,6 +142,16 @@ class _BiodataPageState extends State<BiodataPage> {
                           itemName: "Address",
                           itemDetails: "${state.biodataModel.biodata?.alamat}",
                           color: kBlackColor),
+                      CostumeBiodataTile(
+                          itemName: "Facebook",
+                          itemDetails:
+                              "${state.biodataModel.biodata?.facebook?.toLowerCase()}",
+                          color: kBlackColor),
+                      CostumeBiodataTile(
+                          itemName: "Twitter",
+                          itemDetails:
+                              "${state.biodataModel.biodata?.twitter?.toLowerCase()}",
+                          color: kBlackColor)
                     ],
                   ),
                 ),
@@ -152,7 +169,21 @@ class _BiodataPageState extends State<BiodataPage> {
                     width: 80,
                     height: 50,
                     color: kPrimaryColor,
-                    onPressed: () {},
+                    onPressed: () {
+                      Navigator.push(
+                          context,
+                          (MaterialPageRoute(
+                              builder: (_) => UpdateBiodataPage(
+                                  address: state.biodataModel.biodata!.alamat,
+                                  twitterLink:
+                                      state.biodataModel.biodata!.twitter,
+                                  email: state.biodataModel.biodata!.email,
+                                  nisn: state.biodataModel.biodata!.nisn,
+                                  facebookLink:
+                                      state.biodataModel.biodata!.facebook,
+                                  phoneNumber:
+                                      state.biodataModel.biodata!.ponsel))));
+                    },
                   ),
                 ),
                 Container(

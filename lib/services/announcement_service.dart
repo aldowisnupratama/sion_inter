@@ -13,13 +13,13 @@ class AnnouncementService {
     var token = prefs.get("token");
 
     try {
-      var _biodataResponse = await http.get(_uri, headers: {
+      var announcementResponse = await http.get(_uri, headers: {
         "Content-Type": "application/json; charset=UTF-8",
         "Charset": "utf-8",
         "Authorization": "$token"
       });
 
-      return AnnouncementModel.fromJson(json.decode(_biodataResponse.body));
+      return AnnouncementModel.fromJson(json.decode(announcementResponse.body));
     } catch (e) {
       throw Exception(e);
     }
