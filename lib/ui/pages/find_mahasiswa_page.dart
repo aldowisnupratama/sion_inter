@@ -103,7 +103,11 @@ class _SearchBody extends StatelessWidget {
         if (state is SearchMahasiswaSuccess) {
           if (state.listOfMahasiswa.isEmpty) {
             return Container(
-              child: Text("Not Found"),
+              margin: EdgeInsets.only(top: SizeConfig.blockVertical(4)),
+              child: Text(
+                "Not Found",
+                style: blackTextStyle.copyWith(fontWeight: bold),
+              ),
             );
           }
 

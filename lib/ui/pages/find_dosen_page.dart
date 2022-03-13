@@ -101,26 +101,136 @@ class _SearchBody extends StatelessWidget {
         if (state is SearchDosenSuccess) {
           if (state.listOfDosen.isEmpty) {
             return Container(
-              child: Text("Not Found"),
+              margin: EdgeInsets.only(top: SizeConfig.blockVertical(4)),
+              child: Text(
+                "Not Found",
+                style: blackTextStyle.copyWith(fontWeight: bold),
+              ),
             );
-          }
-          return Column(children: [
-            ExpandedTileList.builder(
-                itemCount: state.listOfDosen.length,
-                itemBuilder: (context, index, expandedTileController) {
-                  return ExpandedTile(
-                      leading: CircleAvatar(
-                        backgroundColor: kPrimaryColor,
-                        child: Icon(
-                          Icons.person,
-                          color: kWhiteColor,
+          } else {
+            return Column(children: [
+              ExpandedTileList.builder(
+                  itemCount: state.listOfDosen.length,
+                  itemBuilder: (context, index, expandedTileController) {
+                    return ExpandedTile(
+                        leading: CircleAvatar(
+                          backgroundColor: kPrimaryColor,
+                          child: Icon(
+                            Icons.person,
+                            color: kWhiteColor,
+                          ),
                         ),
-                      ),
-                      title: Text("${state.listOfDosen[index].nama}"),
-                      content: Container(),
-                      controller: expandedTileController);
-                })
-          ]);
+                        title: Text("${state.listOfDosen[index].nama}"),
+                        content: Container(
+                          decoration: BoxDecoration(
+                              borderRadius: BorderRadius.circular(18),
+                              color: kWhiteColor),
+                          margin: EdgeInsets.only(
+                              top: SizeConfig.blockVertical(0.5),
+                              bottom: SizeConfig.blockVertical(0.5),
+                              left: SizeConfig.blockHorizontal(1),
+                              right: SizeConfig.blockHorizontal(1)),
+                          padding: EdgeInsets.only(
+                              top: SizeConfig.blockVertical(1),
+                              bottom: SizeConfig.blockVertical(1),
+                              left: SizeConfig.blockHorizontal(5),
+                              right: SizeConfig.blockHorizontal(5)),
+                          child: Column(
+                              crossAxisAlignment: CrossAxisAlignment.center,
+                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                              children: [
+                                Row(
+                                  mainAxisAlignment:
+                                      MainAxisAlignment.spaceBetween,
+                                  children: [
+                                    Container(
+                                        width: SizeConfig.blockHorizontal(40),
+                                        child: Text("Name")),
+                                    Flexible(
+                                        child: Text(
+                                      "${state.listOfDosen[index].nama}",
+                                      textAlign: TextAlign.start,
+                                    )),
+                                  ],
+                                ),
+                                Row(
+                                  mainAxisAlignment:
+                                      MainAxisAlignment.spaceBetween,
+                                  children: [
+                                    Container(
+                                        width: SizeConfig.blockHorizontal(40),
+                                        child: Text("Address")),
+                                    Flexible(
+                                        child: Text(
+                                      "${state.listOfDosen[index].alamat}",
+                                      textAlign: TextAlign.start,
+                                    ))
+                                  ],
+                                ),
+                                Row(
+                                  mainAxisAlignment:
+                                      MainAxisAlignment.spaceBetween,
+                                  children: [
+                                    Container(
+                                        margin: EdgeInsets.only(
+                                            right:
+                                                SizeConfig.blockHorizontal(2)),
+                                        child: Text("Phone Number")),
+                                    Flexible(
+                                        child: Text(
+                                      "${state.listOfDosen[index].nomorHp}",
+                                      textAlign: TextAlign.start,
+                                    ))
+                                  ],
+                                ),
+                                Row(
+                                  mainAxisAlignment:
+                                      MainAxisAlignment.spaceBetween,
+                                  children: [
+                                    Container(
+                                        width: SizeConfig.blockHorizontal(40),
+                                        child: Text("Email")),
+                                    Flexible(
+                                        child: Text(
+                                      "${state.listOfDosen[index].email}",
+                                      textAlign: TextAlign.start,
+                                    ))
+                                  ],
+                                ),
+                                Row(
+                                  mainAxisAlignment:
+                                      MainAxisAlignment.spaceBetween,
+                                  children: [
+                                    Container(
+                                        width: SizeConfig.blockHorizontal(40),
+                                        child: Text("Major")),
+                                    Flexible(
+                                        child: Text(
+                                      "${state.listOfDosen[index].jurusan}",
+                                      textAlign: TextAlign.start,
+                                    ))
+                                  ],
+                                ),
+                                Row(
+                                  mainAxisAlignment:
+                                      MainAxisAlignment.spaceBetween,
+                                  children: [
+                                    Container(
+                                        width: SizeConfig.blockHorizontal(40),
+                                        child: Text("Almameter")),
+                                    Flexible(
+                                        child: Text(
+                                      "${state.listOfDosen[index].almamater}",
+                                      textAlign: TextAlign.start,
+                                    ))
+                                  ],
+                                ),
+                              ]),
+                        ),
+                        controller: expandedTileController);
+                  })
+            ]);
+          }
         }
         return Container();
       },

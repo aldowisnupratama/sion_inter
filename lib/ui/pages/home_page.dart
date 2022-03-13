@@ -248,13 +248,7 @@ class _HomePageState extends State<HomePage> {
               },
             );
           }
-          if (state is GuardianshipPageState) {
-            return Container(
-              child: Center(
-                child: Text("Guardianship Page"),
-              ),
-            );
-          }
+
           return Container(
             child: Center(
               child: Text("zonk"),

@@ -167,21 +167,6 @@ class _DrawerMenuState extends State<DrawerMenu> {
                     color: kWhiteColor,
                   ),
                   title: Text(
-                    "Guardianship",
-                    style: whiteTextStyle,
-                  ),
-                  onTap: () {
-                    BlocProvider.of<PageCubit>(context)
-                        .changePage(GuardianshipPageState(title: "Final Test"));
-                    widget.drawerController.close!();
-                  },
-                ),
-                ListTile(
-                  leading: Icon(
-                    Icons.group,
-                    color: kWhiteColor,
-                  ),
-                  title: Text(
                     "FP Topics",
                     style: whiteTextStyle,
                   ),
@@ -235,7 +220,7 @@ class _DrawerMenuState extends State<DrawerMenu> {
                       color: kWhiteColor,
                     ),
                     title: Text(
-                      "Sign Out",
+                      "Log Out",
                       style: whiteTextStyle,
                     ))
               ],

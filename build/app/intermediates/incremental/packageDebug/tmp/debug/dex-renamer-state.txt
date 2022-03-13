@@ -1,4 +1,4 @@
-#Fri Mar 11 21:42:37 WITA 2022
+#Sun Mar 13 21:12:48 WITA 2022
 base.0=/home/maroon/Desktop/github/sion_inter/build/app/intermediates/dex/debug/mergeDexDebug/classes.dex
 path.0=classes.dex
 renamed.0=classes.dex
