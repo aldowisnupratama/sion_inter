@@ -18,6 +18,7 @@ class UpdateBiodataCubit extends Cubit<UpdateBiodataState> {
       if (updateBiodataResponse.result == "Data Berhasil Diperbaharui.") {
         emit(UpdateBiodataValid(updateBiodataModel: updateBiodataResponse));
       } else {
+        print(updateBiodataResponse.message);
         emit(
             UpdateBiodatalInvalid(errorMessage: updateBiodataResponse.message));
       }

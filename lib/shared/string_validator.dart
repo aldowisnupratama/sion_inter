@@ -20,4 +20,8 @@ extension Validator on String {
     bool _validURL = Uri.parse(this).isAbsolute;
     return _validURL;
   }
+
+  bool isValidNIK() {
+    return this.length == 16;
+  }
 }

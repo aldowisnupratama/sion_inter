@@ -237,9 +237,8 @@ class UpdateBiodataPage extends StatelessWidget {
                               FilteringTextInputFormatter.singleLineFormatter
                             ],
                             decoration: InputDecoration(
-                              hintText: (this.address != null
-                                  ? this.phoneNumber
-                                  : ""),
+                              hintText:
+                                  (this.address != null ? this.address : ""),
                               border: OutlineInputBorder(
                                   borderRadius: BorderRadius.circular(18)),
                               focusedBorder: OutlineInputBorder(
@@ -340,7 +339,7 @@ class UpdateBiodataPage extends StatelessWidget {
                               return ShowDialogWidget.dialogWidget(
                                   Icons.announcement,
                                   kPrimaryColor,
-                                  "Password Succesfully Changed\t",
+                                  "Biodata Succesfully Updated\t",
                                   CostumeButton(
                                       width: SizeConfig.blockHorizontal(40),
                                       height: SizeConfig.blockVertical(5),
@@ -359,6 +358,7 @@ class UpdateBiodataPage extends StatelessWidget {
                             });
                       }
                       if (state is UpdateBiodatalInvalid) {
+                        print(state.errorMessage);
                         showDialog(
                             context: context,
                             builder: (context) {

@@ -6,6 +6,7 @@ import 'package:flutter_zoom_drawer/flutter_zoom_drawer.dart';
 import 'package:sion_inter/cubit/cubit.dart';
 import 'package:sion_inter/model/model.dart';
 import 'package:sion_inter/shared/shared.dart';
+import 'package:sion_inter/ui/pages/final_project_page.dart';
 import 'package:sion_inter/ui/pages/final_test_pages.dart';
 import 'package:sion_inter/ui/ui.dart';
 
@@ -105,6 +106,32 @@ class _HomePageState extends State<HomePage> {
                   child: Center(
                     child: Text("Schedule page"),
                   ),
+                );
+              },
+            );
+          }
+          if (state is FinalProjectPageState) {
+            return BlocBuilder<FinalProjectTopicCubit, FinalProjectTopicState>(
+              builder: (context, state) {
+                if (state is FinalProjectTopicLoad) {
+                  return Center(
+                    child: SpinKitCircle(
+                      color: kPrimaryColor,
+                    ),
+                  );
+                }
+                if (state is FinalProjectTopicFail) {
+                  return Center(
+                    child: Text("${state.errorMessage}"),
+                  );
+                }
+                if (state is FinalProjectTopicSuccess) {
+                  return FinalProjectsPage(
+                    finalProjectTopic: state.finalProjectTopic,
+                  );
+                }
+                return Center(
+                  child: Text("Final Project Topics"),
                 );
               },
             );

@@ -31,13 +31,21 @@ class BiodataService {
       String faceboook,
       String twitter) async {
     var prefs = await SharedPreferences.getInstance();
-    Map<String, String> data = {
+    Map<String, dynamic> data = {
+      "nik": "1234567891234567",
+      "nama": "kosong",
+      "ortu": "kosong",
       "email": email,
       "nisn": nisn,
       "alamat": address,
       "facebook": faceboook,
       "twitter": twitter,
       "ponsel": phoneNumber,
+      "prov": "330000",
+      "kab": "016200",
+      "kec": "253303",
+      "kelurahan": "kosong",
+      "desa": "kosong",
     };
     Uri _uri = Uri.https(baseApi, updateBiodataApi, data);
     var token = prefs.get("token");
@@ -50,6 +58,7 @@ class BiodataService {
         "Charset": "utf-8",
         "Authorization": "$token",
       });
+      print(json.decode(updateBiodataResponse.body));
 
       return UpdateBiodataModel.fromJson(
           json.decode(updateBiodataResponse.body));

@@ -56,6 +56,12 @@
       "languageVersion": "2.12"
     },
     {
+      "name": "dropdown_search",
+      "rootUri": "file:///home/maroon/snap/flutter/common/flutter/.pub-cache/hosted/pub.dartlang.org/dropdown_search-3.0.1",
+      "packageUri": "lib/",
+      "languageVersion": "2.12"
+    },
+    {
       "name": "equatable",
       "rootUri": "file:///home/maroon/snap/flutter/common/flutter/.pub-cache/hosted/pub.dartlang.org/equatable-2.0.3",
       "packageUri": "lib/",
@@ -416,7 +422,7 @@
       "languageVersion": "2.12"
     }
   ],
-  "generated": "2022-03-11T13:58:53.767883Z",
+  "generated": "2022-04-22T20:34:34.629371Z",
   "generator": "pub",
-  "generatorVersion": "2.16.1"
+  "generatorVersion": "2.16.2"
 }

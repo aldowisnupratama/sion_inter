@@ -101,6 +101,7 @@
     <item name="visible_removing_fragment_view_tag" type="id"/>
     <integer name="status_bar_notification_info_maxnum">999</integer>
     <string name="androidx_startup" translatable="false">androidx.startup</string>
+    <string name="default_web_client_id" translatable="false">471555442887-hcpvvo6sojs7so9gv5j6qghfekcalmr0.apps.googleusercontent.com</string>
     <string name="flutter_downloader_notification_canceled">canceled</string>
     <string name="flutter_downloader_notification_channel_description">Display download progress</string>
     <string name="flutter_downloader_notification_channel_name">Downloader</string>
@@ -109,6 +110,12 @@
     <string name="flutter_downloader_notification_in_progress">in progress</string>
     <string name="flutter_downloader_notification_paused">paused</string>
     <string name="flutter_downloader_notification_started">started</string>
+    <string name="gcm_defaultSenderId" translatable="false">471555442887</string>
+    <string name="google_api_key" translatable="false">AIzaSyAc6MlMWNl51nhpFWCfZZ_zVnBS1faS1G0</string>
+    <string name="google_app_id" translatable="false">1:471555442887:android:53bca34cbbfa6b7d8916e2</string>
+    <string name="google_crash_reporting_api_key" translatable="false">AIzaSyAc6MlMWNl51nhpFWCfZZ_zVnBS1faS1G0</string>
+    <string name="google_storage_bucket" translatable="false">sion-mobile.appspot.com</string>
+    <string name="project_id" translatable="false">sion-mobile</string>
     <string name="status_bar_notification_info_overflow">999+</string>
     <style name="LaunchTheme" parent="@android:style/Theme.Light.NoTitleBar">
         <!-- Show a splash screen on the activity. Automatically removed when

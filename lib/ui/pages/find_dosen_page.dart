@@ -54,7 +54,9 @@ class __searchState extends State<_search> {
         controller: _textController,
         autocorrect: false,
         onChanged: (text) {
-          context.read<SearchDosenBloc>().add(TextChanged(term: text));
+          if (text.length > 3) {
+            context.read<SearchDosenBloc>().add(TextChanged(term: text));
+          }
         },
         decoration: InputDecoration(
             iconColor: kPrimaryColor,
@@ -140,8 +142,6 @@ class _SearchBody extends StatelessWidget {
                               mainAxisAlignment: MainAxisAlignment.spaceBetween,
                               children: [
                                 Row(
-                                  mainAxisAlignment:
-                                      MainAxisAlignment.spaceBetween,
                                   children: [
                                     Container(
                                         width: SizeConfig.blockHorizontal(40),
@@ -154,8 +154,6 @@ class _SearchBody extends StatelessWidget {
                                   ],
                                 ),
                                 Row(
-                                  mainAxisAlignment:
-                                      MainAxisAlignment.spaceBetween,
                                   children: [
                                     Container(
                                         width: SizeConfig.blockHorizontal(40),
@@ -168,10 +166,9 @@ class _SearchBody extends StatelessWidget {
                                   ],
                                 ),
                                 Row(
-                                  mainAxisAlignment:
-                                      MainAxisAlignment.spaceBetween,
                                   children: [
                                     Container(
+                                        width: SizeConfig.blockHorizontal(40),
                                         margin: EdgeInsets.only(
                                             right:
                                                 SizeConfig.blockHorizontal(2)),
@@ -184,8 +181,6 @@ class _SearchBody extends StatelessWidget {
                                   ],
                                 ),
                                 Row(
-                                  mainAxisAlignment:
-                                      MainAxisAlignment.spaceBetween,
                                   children: [
                                     Container(
                                         width: SizeConfig.blockHorizontal(40),
@@ -198,8 +193,6 @@ class _SearchBody extends StatelessWidget {
                                   ],
                                 ),
                                 Row(
-                                  mainAxisAlignment:
-                                      MainAxisAlignment.spaceBetween,
                                   children: [
                                     Container(
                                         width: SizeConfig.blockHorizontal(40),
@@ -212,8 +205,6 @@ class _SearchBody extends StatelessWidget {
                                   ],
                                 ),
                                 Row(
-                                  mainAxisAlignment:
-                                      MainAxisAlignment.spaceBetween,
                                   children: [
                                     Container(
                                         width: SizeConfig.blockHorizontal(40),

@@ -23,13 +23,13 @@ class GPATile extends StatelessWidget {
           borderRadius: BorderRadius.circular(defaultRadius),
           color: kWhiteColor),
       child: Row(
-        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+        mainAxisAlignment: MainAxisAlignment.spaceAround,
         children: [
           Column(
             children: [
               Text(
                 "${gpa.ipSemester}",
-                style: greenTextStyle.copyWith(fontSize: 54, fontWeight: bold),
+                style: greenTextStyle.copyWith(fontSize: 36, fontWeight: bold),
               ),
               Row(
                 children: [
@@ -61,22 +61,22 @@ class GPATile extends StatelessWidget {
               Text(
                 "Semester",
                 style:
-                    blackTextStyle.copyWith(fontSize: 18, fontWeight: semiBold),
+                    blackTextStyle.copyWith(fontSize: 14, fontWeight: semiBold),
               ),
               Text(
                 "${gpa.semester}",
                 style: yellowTextStyle.copyWith(
-                    fontSize: 18, fontWeight: semiBold),
+                    fontSize: 14, fontWeight: semiBold),
               ),
               Text(
                 "GPA Comulative",
                 style:
-                    blackTextStyle.copyWith(fontSize: 18, fontWeight: semiBold),
+                    blackTextStyle.copyWith(fontSize: 14, fontWeight: semiBold),
               ),
               Text(
                 "${gpa.ipKumulatif}",
                 style: yellowTextStyle.copyWith(
-                    fontSize: 18, fontWeight: semiBold),
+                    fontSize: 14, fontWeight: semiBold),
               )
             ],
           )

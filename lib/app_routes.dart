@@ -2,9 +2,6 @@ import 'package:flutter/material.dart';
 
 import 'package:sion_inter/shared/shared.dart';
 
-import 'package:sion_inter/ui/pages/find_pages.dart';
-import 'package:sion_inter/ui/pages/update_password_page.dart';
-
 import '../../ui/ui.dart';
 
 class AppRoute {
@@ -25,6 +22,12 @@ class AppRoute {
         return MaterialPageRoute(builder: (_) => UpdatePasswordPage());
       case findPages:
         return MaterialPageRoute(builder: (_) => FindPages());
+      case resetMsPasswordScreenPath:
+        return MaterialPageRoute(builder: (_) => ResetMsPasswordPage());
+      case searchFinalProjectScreenPath:
+        return MaterialPageRoute(builder: (_) => SearchFinalProjectPage());
+      case biodataDiktiScreenPath:
+        return MaterialPageRoute(builder: (_) => BiodataDiktiPage());
 
       default:
         return null;

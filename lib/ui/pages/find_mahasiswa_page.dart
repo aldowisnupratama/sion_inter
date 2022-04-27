@@ -53,9 +53,9 @@ class __searchState extends State<_search> {
         controller: _textController,
         autocorrect: false,
         onChanged: (text) {
-          // BlocProvider.of<SearchMahasiswaBloc>(context)
-          //     .add(TextChanged(text: text));
-          context.read<SearchMahasiswaBloc>().add(TextChanged(text: text));
+          if (text.length > 3) {
+            context.read<SearchMahasiswaBloc>().add(TextChanged(text: text));
+          }
         },
         decoration: InputDecoration(
             iconColor: kPrimaryColor,
@@ -140,47 +140,56 @@ class _SearchBody extends StatelessWidget {
                             right: SizeConfig.blockHorizontal(5)),
                         child: Column(
                             crossAxisAlignment: CrossAxisAlignment.center,
+                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
                             children: [
                               Row(
-                                mainAxisAlignment:
-                                    MainAxisAlignment.spaceBetween,
                                 children: [
-                                  Expanded(child: Text("Name")),
+                                  Container(
+                                      margin: EdgeInsets.only(
+                                          left: SizeConfig.blockHorizontal(8)),
+                                      width: 100,
+                                      child: Text("Name")),
                                   Flexible(
                                       child: Text(
-                                    "${state.listOfMahasiswa[index].nama}",
-                                    textAlign: TextAlign.end,
-                                  )),
+                                          "${state.listOfMahasiswa[index].nama}",
+                                          textAlign: TextAlign.start)),
                                 ],
                               ),
                               Row(
-                                mainAxisAlignment:
-                                    MainAxisAlignment.spaceBetween,
                                 children: [
-                                  Expanded(child: Text("ID")),
+                                  Container(
+                                      margin: EdgeInsets.only(
+                                          left: SizeConfig.blockHorizontal(8)),
+                                      width: 100,
+                                      child: Text("ID")),
                                   Flexible(
                                       child: Text(
-                                          "${state.listOfMahasiswa[index].nim}"))
+                                    "${state.listOfMahasiswa[index].nim}",
+                                    textAlign: TextAlign.start,
+                                  ))
                                 ],
                               ),
                               Row(
-                                mainAxisAlignment:
-                                    MainAxisAlignment.spaceBetween,
                                 children: [
-                                  Expanded(child: Text("Major")),
+                                  Container(
+                                    margin: EdgeInsets.only(
+                                        left: SizeConfig.blockHorizontal(8)),
+                                    width: 100,
+                                    child: Text("Major"),
+                                  ),
                                   Flexible(
                                       child: Text(
                                           "${state.listOfMahasiswa[index].prodi}"))
                                 ],
                               ),
                               Row(
-                                mainAxisAlignment:
-                                    MainAxisAlignment.spaceBetween,
                                 children: [
-                                  Expanded(child: Text("Status")),
-                                  Flexible(
-                                      child: Text(
-                                          "${state.listOfMahasiswa[index].status}"))
+                                  Container(
+                                      margin: EdgeInsets.only(
+                                          left: SizeConfig.blockHorizontal(8)),
+                                      width: 100,
+                                      child: Text("Status")),
+                                  Text("${state.listOfMahasiswa[index].status}")
                                 ],
                               ),
                             ]),

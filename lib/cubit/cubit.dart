@@ -9,3 +9,7 @@ export 'update_biodata/update_biodata_cubit.dart';
 export 'schedule/schedule_cubit.dart';
 export 'lecture/lecture_selector_cubit.dart';
 export 'selected_day/selected_day_cubit.dart';
+export 'final_project_topics/final_project_topic_cubit.dart';
+export 'attendance/attendancecubit_cubit.dart';
+export 'biodata_dikti/biodata_dikti_cubit.dart';
+export 'biodata_dikti/update_biodata_dikti_cubit.dart';

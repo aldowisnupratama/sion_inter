@@ -149,23 +149,27 @@ class _UpdatePasswordPageState extends State<UpdatePasswordPage> {
                             showDialog(
                                 context: context,
                                 builder: (context) {
-                                  return ShowDialogWidget.dialogWidget(
-                                      Icons.announcement,
-                                      Colors.yellow,
-                                      "Password Succesfully Changed\tPlease re-login.",
-                                      CostumeButton(
-                                          width: SizeConfig.blockHorizontal(40),
-                                          height: SizeConfig.blockVertical(5),
-                                          buttonName: Text(
-                                            "OK",
-                                            style: whiteTextStyle,
-                                          ),
-                                          color: kPrimaryColor,
-                                          onPressed: () {
-                                            deleteToken();
-                                            Navigator.pop(context);
-                                            doOpenPage();
-                                          }));
+                                  return WillPopScope(
+                                      child: ShowDialogWidget.dialogWidget(
+                                          Icons.announcement,
+                                          kGreenColor,
+                                          "Password Succesfully Changed\tPlease re-login.",
+                                          CostumeButton(
+                                              width: SizeConfig.blockHorizontal(
+                                                  40),
+                                              height:
+                                                  SizeConfig.blockVertical(5),
+                                              buttonName: Text(
+                                                "OK",
+                                                style: whiteTextStyle,
+                                              ),
+                                              color: kPrimaryColor,
+                                              onPressed: () {
+                                                deleteToken();
+                                                Navigator.pop(context);
+                                                doOpenPage();
+                                              })),
+                                      onWillPop: () async => false);
                                 });
                           }
                         },

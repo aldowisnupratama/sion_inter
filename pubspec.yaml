@@ -45,6 +45,8 @@ dependencies:
   fluttertoast: ^8.0.8
   flutter_pw_validator: ^1.4.1
   stream_transform: ^2.0.0
+  dropdown_search: ^3.0.1
+  
 
 dev_dependencies:
   flutter_test:

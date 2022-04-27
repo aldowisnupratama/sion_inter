@@ -27,7 +27,7 @@ class CostumeButton extends StatelessWidget {
               shape: RoundedRectangleBorder(
                   borderRadius: BorderRadius.circular(18))),
           onPressed: onPressed,
-          child: buttonName),
+          child: Center(child: buttonName)),
     );
   }
 }

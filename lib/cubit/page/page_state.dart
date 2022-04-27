@@ -42,3 +42,8 @@ class FinalTestPageState extends PageState {
 
   FinalTestPageState({required this.title});
 }
+
+class FinalProjectPageState extends PageState {
+  final String title;
+  FinalProjectPageState({required this.title});
+}

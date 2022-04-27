@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_zoom_drawer/flutter_zoom_drawer.dart';
 import 'package:shared_preferences/shared_preferences.dart';
+
 import 'package:sion_inter/cubit/cubit.dart';
 import 'package:sion_inter/shared/shared.dart';
 
@@ -125,6 +126,7 @@ class _DrawerMenuState extends State<DrawerMenu> {
                     BlocProvider.of<PageCubit>(context)
                         .changePage(SchedulePageState(title: "Schedule Page"));
                     BlocProvider.of<ScheduleCubit>(context).fetchSchedule();
+                    context.read<AttendanceCubit>().fetchAttendance();
 
                     widget.drawerController.close!();
                   },
@@ -163,7 +165,7 @@ class _DrawerMenuState extends State<DrawerMenu> {
                 ),
                 ListTile(
                   leading: Icon(
-                    Icons.group,
+                    Icons.topic,
                     color: kWhiteColor,
                   ),
                   title: Text(
@@ -171,6 +173,11 @@ class _DrawerMenuState extends State<DrawerMenu> {
                     style: whiteTextStyle,
                   ),
                   onTap: () {
+                    context.read<PageCubit>().changePage(
+                        FinalProjectPageState(title: "Final Project"));
+                    context
+                        .read<FinalProjectTopicCubit>()
+                        .fetchFinalProjectTopics();
                     widget.drawerController.close!();
                   },
                 ),

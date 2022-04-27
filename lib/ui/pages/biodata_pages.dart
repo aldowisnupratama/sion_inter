@@ -220,7 +220,9 @@ class _BiodataPageState extends State<BiodataPage> {
                     width: 80,
                     height: 50,
                     color: kPrimaryColor,
-                    onPressed: () {},
+                    onPressed: () {
+                      Navigator.pushNamed(context, biodataDiktiScreenPath);
+                    },
                   ),
                 ),
                 Container(
@@ -231,14 +233,16 @@ class _BiodataPageState extends State<BiodataPage> {
                       bottom: SizeConfig.blockVertical(5)),
                   child: CostumeButton(
                     buttonName: Text(
-                      "Reset Microsoft Teams Password",
+                      "Reset Ms Teams Password",
                       style: whiteTextStyle.copyWith(
                           fontSize: 16, fontWeight: semiBold),
                     ),
                     width: 80,
                     height: 50,
                     color: kPrimaryColor,
-                    onPressed: () {},
+                    onPressed: () {
+                      Navigator.pushNamed(context, resetMsPasswordScreenPath);
+                    },
                   ),
                 ),
               ]),
