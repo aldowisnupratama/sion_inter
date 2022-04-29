@@ -422,7 +422,7 @@ class _UpdateBiodataDiktiState extends State<UpdateBiodataDikti> {
                                             Navigator.pop(context);
                                             Navigator.pushNamedAndRemoveUntil(
                                                 context,
-                                                biodataScreenPath,
+                                                mainScreenPath,
                                                 (route) => false);
                                           })),
                                 );
