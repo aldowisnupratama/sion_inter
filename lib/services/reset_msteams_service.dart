@@ -19,8 +19,7 @@ class ResetMsTeamsService {
       "Authorization": "$token"
     });
     var jsonBody = json.decode(resetMsTeamsResponse.body);
-    if (jsonBody["result"] ==
-        "Tempat lahir tidak sesuai. Mohon sesuaikan penulisan (huruf kapital, tanda baca, dll)") {
+    if (resetMsTeamsResponse.body.contains("error")) {
       throw ResetMSTeamsFailModel.fromJson(jsonBody);
     } else {
       return ResetMSTeamsModel.fromJson(jsonBody);

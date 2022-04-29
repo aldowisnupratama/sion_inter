@@ -404,25 +404,28 @@ class _UpdateBiodataDiktiState extends State<UpdateBiodataDikti> {
                           showDialog(
                               context: context,
                               builder: (context) {
-                                return ShowDialogWidget.dialogWidget(
-                                    Icons.announcement,
-                                    kPrimaryColor,
-                                    "Dikti Biodata Succesfully Updated\t",
-                                    CostumeButton(
-                                        width: SizeConfig.blockHorizontal(40),
-                                        height: SizeConfig.blockVertical(5),
-                                        buttonName: Text(
-                                          "OK",
-                                          style: whiteTextStyle,
-                                        ),
-                                        color: kPrimaryColor,
-                                        onPressed: () {
-                                          Navigator.pop(context);
-                                          Navigator.pushNamedAndRemoveUntil(
-                                              context,
-                                              biodataScreenPath,
-                                              (route) => false);
-                                        }));
+                                return WillPopScope(
+                                  onWillPop: () async => false,
+                                  child: ShowDialogWidget.dialogWidget(
+                                      Icons.announcement,
+                                      kPrimaryColor,
+                                      "Dikti Biodata Succesfully Updated\t",
+                                      CostumeButton(
+                                          width: SizeConfig.blockHorizontal(40),
+                                          height: SizeConfig.blockVertical(5),
+                                          buttonName: Text(
+                                            "OK",
+                                            style: whiteTextStyle,
+                                          ),
+                                          color: kPrimaryColor,
+                                          onPressed: () {
+                                            Navigator.pop(context);
+                                            Navigator.pushNamedAndRemoveUntil(
+                                                context,
+                                                biodataScreenPath,
+                                                (route) => false);
+                                          })),
+                                );
                               });
                         }
                         if (state is UpdateBiodataDiktiFail) {
