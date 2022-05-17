@@ -4,7 +4,7 @@
 SION mobile is an android-based application designed to be a place for information exchange between ITB Stikom Bali academics and ITB Stikom Bali 
 international students where international students can receive up-to-date information directly from ITB Stikom Bali academics.
 
-## Installation Instructions
+## SION Mobile installation instructions
 The requirements to install SION mobile:
 * Android phone with Android Lollipop 5.1.1 specifications or above. 
 * Android phone with 1GB RAM or more.
