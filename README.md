@@ -15,7 +15,7 @@ App installation:
 2.	Copy Sionmobile.apk into your smartphone
 3.	Press the Sionmobile.apk file and the installation will run
   
-   <img src="https://user-images.githubusercontent.com/48169447/168837380-7a6c536b-5d16-4ab3-8126-43716b5d84e6.jpg" alt="drawing" width="200"/>
+    <img src="https://user-images.githubusercontent.com/48169447/168837495-a1b31309-ecb1-4929-8381-ec313f19cfa3.jpg" alt="drawing" width="200"/>
 4.	When the installation is complete, you can login using the following credentials:
   * Username: 180030926
   * Password: Tested12345W$
