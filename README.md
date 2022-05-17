@@ -9,13 +9,14 @@ The requirements to install SION mobile:
 * Android phone with Android Lollipop 5.1.1 specifications or above. 
 * Android phone with 1GB RAM or more.
 * Sionmobile.apk
+
 App installation:
 1.	Connect smartphone with laptop
 2.	Copy Sionmobile.apk into your smartphone
 3.	Press the Sionmobile.apk file and the installation will run
 4.	When the installation is complete, you can login using the following credentials:
-* Username: 180030926
-* Password: Tested12345W$
+  * Username: 180030926
+  * Password: Tested12345W$
 
 
 
