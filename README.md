@@ -1,8 +1,8 @@
 # sion_inter
 
 ## SION INTER
-
-A new Flutter project.
+SION mobile is an android-based application designed to be a place for information exchange between ITB Stikom Bali academics and ITB Stikom Bali 
+international students where international students can receive up-to-date information directly from ITB Stikom Bali academics.
 
 ## Getting Started
 
