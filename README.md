@@ -14,7 +14,8 @@ App installation:
 1.	Connect smartphone with laptop
 2.	Copy Sionmobile.apk into your smartphone
 3.	Press the Sionmobile.apk file and the installation will run
-4.	When the installation is complete, you can login using the following credentials:
+   ![alt text](https://drive.google.com/file/d/1QRPgKHV44D-7QhlOQEOn3r-uGjRj04SB/view?usp=sharing)
+5.	When the installation is complete, you can login using the following credentials:
   * Username: 180030926
   * Password: Tested12345W$
 
